@@ -393,81 +393,68 @@ final class LoadAndDisplayImageTask implements IoUtils.CopyListener, Runnable {
 	}
 
 	public void run() {
-		if (waitIfPaused())
-			;
-		while (delayIfNeed())
+		if (!waitIfPaused()) {
 			return;
+		}
+
+		if (delayIfNeed()) {
+			return;
+		}
+
 		ReentrantLock localReentrantLock = this.imageLoadingInfo.loadFromUriLock;
 		L.d("Start display image task [%s]",
 				new Object[] { this.memoryCacheKey });
+
 		if (localReentrantLock.isLocked())
 			L.d("Image already is loading. Waiting... [%s]",
 					new Object[] { this.memoryCacheKey });
 		localReentrantLock.lock();
 		try {
 			checkTaskNotActual();
-			Object localObject3 = this.configuration.memoryCache
+			Bitmap bmp = this.configuration.memoryCache
 					.get(this.memoryCacheKey);
-			Object localObject1;
-			if ((localObject3 == null)
-					|| (((Bitmap) localObject3).isRecycled())) {
-				localObject3 = tryLoadBitmap();
-				if (localObject3 == null)
+			if (bmp == null || bmp.isRecycled()) {
+				bmp = tryLoadBitmap();
+				if (bmp == null) {
 					return;
-				checkTaskNotActual();
-				checkTaskInterrupted();
-				localObject1 = localObject3;
-				if (this.options.shouldPreProcess()) {
-					L.d("PreProcess image before caching in memory [%s]",
-							new Object[] { this.memoryCacheKey });
-					localObject3 = this.options.getPreProcessor().process(
-							(Bitmap) localObject3);
-					localObject1 = localObject3;
-					if (localObject3 == null) {
-						L.e("Pre-processor returned null [%s]",
-								new Object[] { this.memoryCacheKey });
-						localObject1 = localObject3;
-					}
-				}
-				localObject3 = localObject1;
-				if (localObject1 != null) {
-					localObject3 = localObject1;
-					if (this.options.isCacheInMemory()) {
-						L.d("Cache image in memory [%s]",
-								new Object[] { this.memoryCacheKey });
-						this.configuration.memoryCache.put(this.memoryCacheKey,
-								localObject1);
-						localObject3 = localObject1;
-					}
 				}
 			}
-			while (true) {
-				localObject1 = localObject3;
-				if (localObject3 != null) {
-					localObject1 = localObject3;
-					if (this.options.shouldPostProcess()) {
+			checkTaskNotActual();
+			checkTaskInterrupted();
+			if (options.shouldPreProcess()) {
+				L.d("PreProcess image before caching in memory [%s]",
+						new Object[] { this.memoryCacheKey });
+				bmp = options.getPreProcessor().process(bmp);
+				if (bmp == null) {
+					L.d("Pre-processor returned null [%s]",
+							new Object[] { this.memoryCacheKey });
+				} else {
+					if (options.isCacheInMemory()) {
+						L.d("Cache image in memory [%s]",
+								new Object[] { this.memoryCacheKey });
+						configuration.memoryCache.put(memoryCacheKey, bmp);
+					}
+					if (options.shouldPostProcess()) {
 						L.d("PostProcess image before displaying [%s]",
 								new Object[] { this.memoryCacheKey });
-						localObject3 = this.options.getPostProcessor().process(
-								(Bitmap) localObject3);
-						localObject1 = localObject3;
-						if (localObject3 == null) {
-							L.e("Post-processor returned null [%s]",
+						bmp = options.getPostProcessor().process(bmp);
+						if (bmp == null) {
+							L.d("Post-processor returned null [%s]",
 									new Object[] { this.memoryCacheKey });
-							localObject1 = localObject3;
+						} else {
+							checkTaskNotActual();
+							checkTaskInterrupted();
 						}
 					}
+
 				}
-				checkTaskNotActual();
-				checkTaskInterrupted();
-				localReentrantLock.unlock();
-				runTask(new DisplayBitmapTask(localObject1,
-						this.imageLoadingInfo, this.engine, this.loadedFrom),
-						this.syncLoading, this.handler, this.engine);
+			}
+
+			if (bmp != null) {
+				DisplayBitmapTask displayBitmapTask = new DisplayBitmapTask(
+						bmp, imageLoadingInfo, engine, loadedFrom);
+				runTask(displayBitmapTask, syncLoading, handler, engine);
 				return;
-				this.loadedFrom = LoadedFrom.MEMORY_CACHE;
-				L.d("...Get cached bitmap from memory after waiting. [%s]",
-						new Object[] { this.memoryCacheKey });
 			}
 		} catch (TaskCancelledException localTaskCancelledException) {
 			fireCancelEvent();
