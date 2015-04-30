@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/videi_recorder_parent" android:background="@color/textcolor06" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/video_recorder_toplayout" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentTop="true">
+        <Button android:id="@id/video_recorder_close" android:background="@drawable/btn_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/font09" android:textColor="@color/textcolor09" android:id="@id/tv_video_recorder_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00/00:30" android:layout_centerHorizontal="true" />
+        <Button android:id="@id/video_recorder_camera" android:background="@drawable/icon_photo_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/video_recorder_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/video_recorder_toplayout">
+        <SurfaceView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/video_recorder_bottomlayout" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/video_recorder_progress">
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/video_recorder_delete" android:background="@drawable/btn_delete" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/video_recorder_record" android:background="@drawable/btn_video_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <Button android:id="@id/video_recorder_finish" android:background="@drawable/btn_finish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.cubic.autohome.business.club.ui.view.AHProgressView android:id="@id/video_recorder_progress" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_below="@id/video_recorder_content" />
+    <TextView android:gravity="center" android:id="@id/recorder_content_state" android:background="#7f000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="56.0dip" android:text="长按蓝色按钮进行拍摄" android:layout_above="@id/video_recorder_progress" android:layout_centerHorizontal="true" />
+</RelativeLayout>

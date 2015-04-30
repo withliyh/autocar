@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0dip" android:textColor="@color/textcolor03" android:gravity="center_vertical" android:id="@id/owner_setup_push_state_title" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/owner_setup_push_status" />
+        <RelativeLayout android:id="@id/owner_setup_push_sysmsg" android:background="@drawable/owner_function_selector" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="1.0px">
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:gravity="center_vertical" android:id="@id/owner_setup_push_sysmsg_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_setup_push_sysmsg" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <com.cubic.autohome.common.view.AHSlipButton android:id="@id/owner_setup_push_sysmsg_slipbtn" android:layout_width="68.0dip" android:layout_height="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/owner_setup_push_personmsg" android:background="@drawable/owner_function_selector" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="1.0px">
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:gravity="center_vertical" android:id="@id/owner_setup_push_personmsg_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_setup_push_personmsg" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <com.cubic.autohome.common.view.AHSlipButton android:id="@id/owner_setup_push_personmsg_slipbtn" android:layout_width="68.0dip" android:layout_height="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <TextView android:textSize="14.0dip" android:textColor="@color/textcolor03" android:gravity="center_vertical" android:id="@id/owner_setup_push_time_title" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/owner_setup_push_time" />
+        <RelativeLayout android:id="@id/owner_setup_push_time" android:background="@drawable/owner_function_selector" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="1.0px">
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:gravity="center_vertical" android:id="@id/owner_setup_push_time_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_setup_push_pushtime" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="15.0dip" android:textColor="@color/textcolor01" android:id="@id/owner_setup_push_time_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

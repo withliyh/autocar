@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rl_picture_content" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.AHImagePager android:id="@id/pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:layout_centerInParent="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/pictype_bottomlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:background="#ff1f1f1f" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bottombar_shadow" android:layout_width="fill_parent" android:layout_height="35.0dip">
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/pic_downtv1" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:background="#ff1f1f1f" android:layout_width="1.0px" android:layout_height="31.0dip" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/pic_downtv2" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:background="#ff1f1f1f" android:layout_width="1.0px" android:layout_height="31.0dip" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/pic_downtv3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:background="#ff1f1f1f" android:layout_width="1.0px" android:layout_height="31.0dip" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/pic_downtv4" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+            <ImageView android:background="#ff1f1f1f" android:layout_width="1.0px" android:layout_height="31.0dip" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/pic_downtv5" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:textSize="16.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/tv_title_pic" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="15.0dip" android:maxLines="2" android:layout_above="@id/pictype_bottomlayout" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_menu_bar_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <TextView android:textSize="16.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="14.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/person_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+        <RelativeLayout android:id="@id/replyLayout" android:background="@drawable/bottombar_shadow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/reply_count" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+            <TextView android:textSize="15.0dip" android:textColor="@color/textcolor05" android:gravity="center" android:id="@id/pic_content_comment" android:background="@drawable/pic_bottombar_btn_input_box" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="5.0dip" android:text="发表评论" android:layout_toLeftOf="@id/reply_count" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_menu_bar_top" android:background="@drawable/topbar_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/bottomlayout" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="8.0dip">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/iv_share" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/bar_btn_icon_share_white" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/iv_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/bar_btn_icon_download_white" android:scaleType="fitXY" android:layout_toLeftOf="@id/iv_share" android:layout_centerVertical="true" />
+            </LinearLayout>
+            <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor09" android:id="@id/picCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+            <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center_vertical" android:id="@id/tv_back" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_return_white" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <com.cubic.autohome.common.view.AHEditDrawer android:id="@id/upDrawer" android:background="#dd979797" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHOptionUpdrawer android:id="@id/picShareDrawer" android:background="#dd979797" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/loadingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

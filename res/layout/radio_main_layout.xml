@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.baidu.cyberplayer.core.BVideoView android:id="@id/mPlayer_BVideoView" android:layout_width="1.0dip" android:layout_height="1.0dip" />
+    <com.cubic.autohome.common.view.BlurImageView android:id="@id/base_map_ImageView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/fm_bg_mask" android:scaleType="centerCrop" />
+    <View android:background="#cc000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <RelativeLayout android:id="@id/fm_topbar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+        <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center_vertical" android:id="@id/tv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_return_white" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor09" android:id="@id/radio_title_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor09" android:id="@id/radio_info_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/fm_topbar_layout" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:gravity="top" android:id="@id/fm_poster_layout" android:layout_width="300.0dip" android:layout_height="300.0dip" android:layout_marginTop="15.0dip" android:layout_below="@id/radio_info_TextView" android:layout_centerHorizontal="true">
+        <View android:id="@id/fm_poster_default_View" android:background="@drawable/fm_pic_main_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true" />
+        <com.cubic.autohome.common.view.CircularImageView android:id="@id/radio_poster_ImageView" android:layout_width="260.0dip" android:layout_height="260.0dip" android:layout_centerInParent="true" />
+        <com.cubic.autohome.common.view.NetLoadingProgressBar android:id="@id/fm_menu_loading_progress" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:indeterminateDrawable="@drawable/fm_loading_anim" android:indeterminateDuration="3000" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor09" android:id="@id/radio_anchor_name_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/fm_poster_layout" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor09" android:id="@id/radio_play_time_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/radio_anchor_name_TextView" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/radio_play_time_textView">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ImageView android:id="@id/radio_pause_play_ImageView" android:layout_width="70.0dip" android:layout_height="70.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:src="@drawable/btn_fm_play" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/radio_program_list_ImageView" android:layout_width="51.0dip" android:layout_height="51.0dip" android:src="@drawable/btn_fm_menu" android:layout_toLeftOf="@id/radio_pause_play_ImageView" android:layout_centerVertical="true" />
+            <ImageView android:id="@id/radio_comment_ImageView" android:layout_width="51.0dip" android:layout_height="51.0dip" android:src="@drawable/btn_fm_chat" android:layout_toRightOf="@id/radio_pause_play_ImageView" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

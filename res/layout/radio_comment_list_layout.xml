@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/articlesub_main_nav" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/radio_comment_back_TextView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_returntext_selector" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor04" android:id="@id/navigation_title_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/comment" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center" android:id="@id/navigation_right_TextView" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:text="@string/achor_put_questions_to" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/articlesub_main_bottom" android:background="@color/bgcolor05" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="15.0dip" android:textColor="@color/textcolor05" android:gravity="center" android:id="@id/articlesub_main_publishlabel" android:background="@drawable/bar_btn_comment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/replay_comment" android:layout_toLeftOf="@id/articlesub_main_publish" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <View android:id="@id/line_View" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/articlesub_main_nav" />
+    <com.cubic.autohome.common.view.AHPullView android:id="@id/radio_comment_list_PullView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/articlesub_main_bottom" android:layout_below="@id/line_View">
+        <com.cubic.autohome.common.view.AHCustomListView android:id="@id/radio_comment_list_Listview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.cubic.autohome.common.view.AHPullView>
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/errorLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/articlesub_main_bottom" android:layout_below="@id/line_View" />
+    <com.cubic.autohome.common.view.AHEditDrawer android:id="@id/comment_AHEditDrawer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

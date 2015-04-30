@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bulletin_content_comment_row_container" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/bulletin_content_line" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <RelativeLayout android:id="@id/bulletin_content_comment_row" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/bulletin_content_line">
+        <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/bulletin_content_comment_item_image" android:layout_width="25.0dip" android:layout_height="25.0dip" android:src="@drawable/userpic_default" android:scaleType="centerCrop" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor02" android:id="@id/bulletin_content_comment_item_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginBottom="8.0dip" android:text="用户名" android:layout_toRightOf="@id/bulletin_content_comment_item_image" android:layout_alignTop="@id/bulletin_content_comment_item_image" />
+        <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor03" android:id="@id/bulletin_content_comment_item_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="快报评论的内容XXXXXXXXXXXXXXXXXXXX" android:layout_below="@id/bulletin_content_comment_item_image" android:layout_alignLeft="@id/bulletin_content_comment_item_user_name" android:lineSpacingExtra="4.0dip" />
+    </RelativeLayout>
+</RelativeLayout>

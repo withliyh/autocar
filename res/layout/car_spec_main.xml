@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/car_spec_main_nav" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <FrameLayout android:id="@id/car_spec_main_tabs_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <com.cubic.autohome.common.view.AHPagerSlidingTabStrip android:id="@id/car_spec_main_tabs" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="44.0dip">
+                <ImageView android:id="@id/car_spec_main_nav_leftarrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_arrow_left" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ImageView android:id="@id/car_spec_main_nav_rightarrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_arrow_right" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/car_spec_main_return" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_returntext_selector" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/car_spec_main_nav_seg" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/car_spec_main_nav" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/car_spec_main_bottom" android:background="@color/bgcolor05" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentBottom="true">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <ImageView android:layout_gravity="center|right" android:id="@id/car_spec_main_vs" android:background="@drawable/bar_btn_icon_vs" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center|right" android:id="@id/car_spec_main_mapall" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginRight="50.0dip" android:text="地图显示" android:layout_alignParentRight="true" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center|right" android:id="@id/car_spec_main_addvs" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="40.0dip" android:layout_marginRight="50.0dip" android:text="添加对比" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:id="@id/car_spec_main_bottom_seg" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/car_spec_main_bottom" />
+    <com.cubic.autohome.common.view.AHViewPager android:id="@id/car_spec_main_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/car_spec_main_bottom_seg" android:layout_below="@id/car_spec_main_nav_seg" android:overScrollMode="never" />
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="seriesimg_gridview_margin_top">10.0dip</dimen>
+    <dimen name="seriesimg_gridview_horizontalSpacing">10.0dip</dimen>
+    <dimen name="seriesimg_gridview_verticalSpacing">10.0dip</dimen>
+    <dimen name="smallimg_width">100.0dip</dimen>
+    <dimen name="smallimg_high">75.0dip</dimen>
+    <dimen name="activity_item_image_width">280.0dip</dimen>
+    <dimen name="activity_item_image_height">140.0dip</dimen>
+    <dimen name="activity_image_width">280.0dip</dimen>
+    <dimen name="activity_image_height">140.0dip</dimen>
+</resources>

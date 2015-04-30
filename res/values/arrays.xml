@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="owner_used_cars_filter_options">
+        <item>地区</item>
+        <item>品牌</item>
+        <item>价格</item>
+        <item>里程</item>
+        <item>车龄</item>
+        <item>级别</item>
+        <item>来源</item>
+    </string-array>
+    <string-array name="car_filter_used_cars_options">
+        <item>地区</item>
+        <item>品牌</item>
+        <item>价格</item>
+        <item>里程</item>
+        <item>车龄</item>
+        <item>级别</item>
+        <item>来源</item>
+    </string-array>
+    <string-array name="owner_buycar_necessary_options">
+        <item>购置税（元）</item>
+        <item>上牌费用（元）</item>
+        <item>车船使用税（元）</item>
+        <item>交通事故责任强制保险（元）</item>
+    </string-array>
+    <string-array name="owner_buycar_insurance_options">
+        <item>第三者责任险（元）</item>
+        <item>车辆损失险（元）</item>
+        <item>全车盗抢险（元）</item>
+        <item>玻璃单独破碎险（元）</item>
+        <item>自燃损失险（元）</item>
+        <item>不计免赔特约险（元）</item>
+        <item>无过责任险（元）</item>
+        <item>车上人员责任险（元）</item>
+        <item>车身划痕险（元）</item>
+    </string-array>
+    <string-array name="search_type">
+        <item>综合</item>
+        <item>文章</item>
+        <item>视频</item>
+        <item>论坛</item>
+        <item>车系</item>
+    </string-array>
+    <string-array name="search_club_sort_options">
+        <item>最相关</item>
+        <item>最新发布</item>
+        <item>最多回复</item>
+    </string-array>
+    <string-array name="search_club_date_options">
+        <item>全部时间</item>
+        <item>近一周</item>
+        <item>近一月</item>
+        <item>近一年</item>
+    </string-array>
+</resources>

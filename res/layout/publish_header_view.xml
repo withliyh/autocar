@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="@dimen/font05" android:textColor="@color/textcolor05" android:id="@id/et_title" android:background="@android:color/transparent" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:hint="输入标题(最多30个字)" />
+    <ImageView android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/et_title" />
+</RelativeLayout>

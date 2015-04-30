@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.AHBaseWebView android:id="@id/owner_webview_ahwebview" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHErrorLayout android:layout_gravity="center" android:id="@id/owner_webview_error_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</FrameLayout>

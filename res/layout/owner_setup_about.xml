@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" android:overScrollMode="never"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/owner_setup_about_logo_container" android:background="@color/bgcolor01" android:clickable="true" android:layout_width="fill_parent" android:layout_height="250.0dip">
+            <com.cubic.autohome.common.view.RoundImageView android:id="@id/owner_setup_about_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip" android:src="@drawable/about_icon_logo" android:contentDescription="@null" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/textcolor03" android:gravity="center_vertical" android:id="@id/owner_setup_about_version" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginTop="25.0dip" android:text="@string/owner_setup_about_version" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/textcolor03" android:gravity="center" android:id="@id/owner_setup_about_copyright" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_setup_about_copyright" />
+        </LinearLayout>
+        <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:gravity="center_vertical" android:id="@id/owner_setup_about_introduction" android:background="@drawable/owner_function_selector" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginTop="35.0dip" android:layout_marginBottom="1.0px" android:text="@string/owner_setup_about_introduction" android:drawableRight="@drawable/arrow_right" />
+        <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:gravity="center_vertical" android:id="@id/owner_setup_about_question" android:background="@drawable/owner_function_selector" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="1.0px" android:text="@string/owner_setup_about_question" android:drawableRight="@drawable/arrow_right" />
+    </LinearLayout>
+</ScrollView>

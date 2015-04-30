@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.MySlidingDrawer android:orientation="horizontal" android:id="@id/ah_drawer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="60.0dip" android:handle="@id/handle" android:content="@id/content">
+        <Button android:id="@id/handle" android:background="@drawable/black_sidebar_shadow_bg" android:layout_width="1.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </com.cubic.autohome.common.view.MySlidingDrawer>
+</LinearLayout>

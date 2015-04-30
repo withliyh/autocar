@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/white" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="@dimen/ah_common_top_tabs_hight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:id="@id/car_filter_used_cars_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/car_filter_used_cars_item_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:src="@drawable/arrow_right" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor05" android:ellipsize="end" android:gravity="right" android:id="@id/car_filter_used_cars_item_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginRight="10.0dip" android:text="@string/unlimited" android:lines="1" android:layout_toLeftOf="@id/car_filter_used_cars_item_arrow" android:layout_toRightOf="@id/car_filter_used_cars_item_label" android:layout_centerVertical="true" />
+</RelativeLayout>

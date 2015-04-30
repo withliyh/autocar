@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/xuxian" android:layout_width="fill_parent" android:layout_height="70.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="2.0dip">
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor01" android:gravity="center" android:id="@id/text" android:layout_width="fill_parent" android:layout_height="70.0dip" android:text="添加文字" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

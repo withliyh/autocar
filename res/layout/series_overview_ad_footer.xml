@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/ll_layout" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@id/ad_background" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/ad_onlytxt_layout" android:background="@color/bgcolor05" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="10.0dip" android:textColor="@color/textcolor09" android:layout_gravity="center_vertical" android:background="@color/textcolor07" android:paddingLeft="4.0dip" android:paddingTop="1.0dip" android:paddingRight="4.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="推广" />
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor06" android:layout_gravity="center_vertical" android:id="@id/tvAD" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="" />
+        </LinearLayout>
+        <RelativeLayout android:orientation="horizontal" android:id="@id/ad_imgtxt_layout" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+            <View android:id="@id/view1" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="10.0dip" />
+            <com.cubic.autohome.common.view.RemoteImageView android:id="@id/ad_iv" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginLeft="10.0dip" android:layout_below="@id/view1" />
+            <View android:id="@id/view2" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_below="@id/ad_iv" />
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:id="@id/tvAD_main" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:lines="1" android:layout_toRightOf="@id/ad_iv" android:layout_alignTop="@id/ad_iv" />
+            <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/tvAD_sub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:maxLines="2" android:layout_toRightOf="@id/ad_iv" android:layout_alignBottom="@id/ad_iv" android:lineSpacingExtra="-3.0dip" android:lineSpacingMultiplier="1.0" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/textcolor09" android:layout_gravity="center_vertical" android:background="@color/textcolor07" android:paddingLeft="4.0dip" android:paddingTop="1.0dip" android:paddingRight="4.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="推广" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/ad_background_bottom" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/half_tran_back" android:background="#dd333333" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHSlidingDrawer android:layout_gravity="bottom" android:orientation="vertical" android:id="@id/ah_drawer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:handle="@id/handle" android:content="@id/content">
+        <Button android:id="@id/handle" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <Button android:id="@id/drawer_cancel" android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="取消" android:layout_alignParentBottom="true" />
+            <LinearLayout android:orientation="vertical" android:id="@id/drawer_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/drawer_cancel" />
+        </RelativeLayout>
+    </com.cubic.autohome.common.view.AHSlidingDrawer>
+</RelativeLayout>

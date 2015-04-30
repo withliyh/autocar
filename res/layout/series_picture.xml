@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.AHFilterView android:id="@id/car_filter" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/car_filter">
+        <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </ScrollView>
+    <com.cubic.autohome.common.view.PullToRefreshView android:orientation="vertical" android:id="@id/grid_pull_refresh_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/car_filter">
+        <com.cubic.autohome.business.club.ui.view.ImagesGridView android:gravity="center" android:id="@id/gridview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/seriesimg_gridview_margin_top" android:horizontalSpacing="@dimen/seriesimg_gridview_horizontalSpacing" android:verticalSpacing="@dimen/seriesimg_gridview_verticalSpacing" android:stretchMode="columnWidth" android:numColumns="3" android:scrollbarFadeDuration="0" android:fadeScrollbars="false" />
+    </com.cubic.autohome.common.view.PullToRefreshView>
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/loadingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/car_filter" />
+</RelativeLayout>

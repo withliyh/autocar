@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/headerlayout" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:scrollbarStyle="outsideOverlay" android:textSize="16.0dip" android:textColor="@color/textcolor01" android:textColorHint="@color/textcolor05" android:gravity="top" android:id="@id/owner_setup_feedback_header_content" android:background="@color/bgcolor01" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="1.0px" android:minHeight="120.0dip" android:hint="@string/feedback_content_hint" android:lineSpacingMultiplier="1.2" />
+    <EditText android:textSize="16.0dip" android:textColor="@color/textcolor01" android:textColorHint="@color/textcolor05" android:id="@id/owner_setup_feedback_header_phone" android:background="@color/bgcolor01" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0px" android:minHeight="44.0dip" android:hint="@string/feedback_phone_hint" android:singleLine="true" android:inputType="phone" />
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor01" android:gravity="center_vertical" android:id="@id/owner_setup_feedback_header_image_label" android:background="@color/bgcolor01" android:paddingLeft="10.0dip" android:paddingTop="13.0dip" android:paddingRight="10.0dip" android:paddingBottom="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/feedback_label_add_image" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/owner_setup_feedback_header_image_container" android:background="@color/bgcolor01" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_header_image_1" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/owner_setup_feedback_header_image_delete_1" android:background="@drawable/publish_icon_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_header_image_2" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/owner_setup_feedback_header_image_delete_2" android:background="@drawable/publish_icon_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_header_image_3" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/owner_setup_feedback_header_image_delete_3" android:background="@drawable/publish_icon_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_header_image_4" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <ImageView android:layout_gravity="center|right|top" android:id="@id/owner_setup_feedback_header_image_delete_4" android:background="@drawable/publish_icon_delete" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor03" android:gravity="center_vertical" android:id="@id/owner_setup_feedback_header_list_label" android:background="@color/bgcolor03" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="35.0dip" android:text="@string/feedback_label_history" />
+</LinearLayout>

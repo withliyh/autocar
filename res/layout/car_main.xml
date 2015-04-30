@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include android:id="@id/car_top_sorts_layout" android:layout_width="fill_parent" android:layout_height="@dimen/ah_common_top_tabs_hight" layout="@layout/ah_common_top_tabs_layout" />
+    <View android:id="@id/car_main_nav_seg" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/car_top_sorts_layout" />
+    <com.cubic.autohome.common.view.AHViewPager android:id="@id/car_main_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/car_main_nav_seg" android:overScrollMode="never" />
+</RelativeLayout>

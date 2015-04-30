@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost android:id="@android:id/tabhost" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TabWidget android:id="@android:id/tabs" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <FrameLayout android:id="@android:id/tabcontent" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:id="@id/tab_main_sideline" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RadioGroup android:gravity="center" android:layout_gravity="bottom" android:orientation="horizontal" android:id="@id/tab_main_radio" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip">
+            <RadioButton android:textSize="10.0dip" android:textColor="@color/dir_primarybar_txt" android:gravity="center" android:id="@id/tab_main_article" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:checked="true" android:button="@null" android:text="@string/tab_main_article" android:drawableTop="@drawable/nav_icon_article" android:layout_weight="1.0" />
+            <RadioButton android:textSize="10.0dip" android:textColor="@color/dir_primarybar_txt" android:gravity="center" android:id="@id/tab_main_club" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/tab_main_club" android:drawableTop="@drawable/nav_icon_forum" android:layout_weight="1.0" />
+            <RadioButton android:textSize="10.0dip" android:textColor="@color/dir_primarybar_txt" android:gravity="center" android:id="@id/tab_main_car" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/tab_main_car" android:drawableTop="@drawable/nav_icon_findcar" android:layout_weight="1.0" />
+            <com.cubic.autohome.common.view.BadgeRadioButton android:textSize="10.0dip" android:textColor="@color/dir_primarybar_txt" android:gravity="center" android:id="@id/tab_main_sale" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/tab_main_discovery" android:drawableTop="@drawable/nav_icon_sale" android:layout_weight="1.0" />
+            <RadioButton android:textSize="10.0dip" android:textColor="@color/dir_primarybar_txt" android:gravity="center" android:id="@id/tab_main_me" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:button="@null" android:text="@string/tab_main_me" android:drawableTop="@drawable/nav_icon_my" android:layout_weight="1.0" />
+        </RadioGroup>
+    </LinearLayout>
+    <View android:layout_gravity="bottom|center|right" android:id="@id/badge_view_container" android:focusable="false" android:clickable="false" android:layout_width="50.0dip" android:layout_height="50.0dip" />
+</TabHost>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/relative_bulletin_page" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.business.article.ui.view.AHExListView android:id="@id/bulletin_message_list_ahlistview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:divider="@color/textcolor09" android:overScrollMode="never" />
+    <RelativeLayout android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="@dimen/size_default_height">
+        <ImageView android:id="@id/bulletin_page_back" android:background="#a0000000" android:layout_width="40.0dip" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginTop="15.0dip" android:src="@drawable/top_btn_icon_back_selector" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
+        <ImageView android:id="@id/bulletin_page_share" android:background="#a0000000" android:layout_width="40.0dip" android:layout_height="30.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/top_btn_icon_share_selector" android:scaleType="centerCrop" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/hint_more_message" android:background="#ef3280ee" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="有新内容，点击查看" android:layout_alignParentBottom="true" />
+    <com.cubic.autohome.common.view.AHEditDrawer android:id="@id/comment_drawer" android:background="#dd979797" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHOptionUpdrawer android:id="@id/bulletin_page_share_drawer" android:background="#dd000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/bulletin_page_aherrorlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

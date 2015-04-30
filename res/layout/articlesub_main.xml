@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/articlesub_main_nav" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <FrameLayout android:id="@id/articlesub_main_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <com.cubic.autohome.common.view.AHPagerSlidingTabStrip android:id="@id/articlesub_main_tabs" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="44.0dip">
+                <ImageView android:id="@id/articlesub_main_nav_leftarrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_arrow_left" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ImageView android:id="@id/articlesub_main_nav_rightarrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_arrow_right" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/articlesub_main_return" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_returntext_selector" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/articlesub_main_nav_seg" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/articlesub_main_nav" />
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/articlesub_main_bottom" android:background="@color/bgcolor05" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentBottom="true">
+        <TextView android:textSize="20.0dip" android:textColor="@color/textcolor02" android:gravity="center" android:id="@id/articlesub_main_publish" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:text="发表" android:layout_alignParentRight="true" />
+        <TextView android:textSize="15.0dip" android:textColor="@color/textcolor05" android:gravity="center" android:id="@id/articlesub_main_publishlabel" android:background="@drawable/bar_btn_comment" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="发表评论" android:layout_toLeftOf="@id/articlesub_main_publish" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/articlesub_main_bottom_seg" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/articlesub_main_bottom" />
+    <com.cubic.autohome.common.view.AHViewPager android:id="@id/articlesub_main_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/articlesub_main_bottom_seg" android:layout_below="@id/articlesub_main_nav_seg" android:overScrollMode="never" />
+    <com.cubic.autohome.common.view.AHEditDrawer android:id="@id/upDrawer" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

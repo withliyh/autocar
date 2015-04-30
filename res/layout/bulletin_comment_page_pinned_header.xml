@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bulletin_comment_page_container" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor15" android:id="@id/txtupcount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="赞123" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <View android:id="@id/bottom_line" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor15" android:gravity="center_vertical" android:id="@id/txtreplay" android:background="@drawable/bg_bottom_line_shape" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:text=" 6555评  " android:layout_alignParentRight="true" />
+</RelativeLayout>

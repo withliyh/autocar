@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/topic_page" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/topic_page_title" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/topic_page_return" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_returntext_selector" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center" android:id="@id/topic_page_more" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:text="更多" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.cubic.autohome.common.view.AHUnifiedComment android:id="@id/topic_bottombar" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/topic_bottom_ivline" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_above="@id/topic_bottombar" />
+    <ImageView android:id="@id/ivline" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/topic_page_title" />
+    <com.cubic.autohome.common.view.AHMultipleWebViewContainer android:id="@id/web_container" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/topic_bottom_ivline" android:layout_below="@id/ivline" />
+    <com.cubic.autohome.common.view.AHOptionUpdrawer android:id="@id/more_drawer" android:background="#dd000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/topic_page_loading_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/topic_bottom_ivline" android:layout_below="@id/ivline" />
+</RelativeLayout>

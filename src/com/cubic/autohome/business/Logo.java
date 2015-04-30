@@ -1,16 +1,33 @@
 package com.cubic.autohome.business;
 
+import java.io.File;
+import java.io.IOException;
+
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
 import android.os.Handler;
+import android.util.Log;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.cubic.autohome.common.view.BaseActivity;
 import com.cubic.autohome.common.view.RemoteImageView;
+import com.cubic.autohome.common.view.image.cache.disc.DiskCache;
+import com.cubic.autohome.common.view.image.cache.disc.impl.ext.LruDiskCache;
+import com.cubic.autohome.common.view.image.cache.disc.naming.Md5FileNameGenerator;
+import com.cubic.autohome.common.view.image.cache.memory.impl.WeakMemoryCache;
+import com.cubic.autohome.common.view.image.core.DisplayImageOptions;
+import com.cubic.autohome.common.view.image.core.ImageLoader;
 import com.cubic.autohome.common.view.image.core.ImageLoaderConfiguration;
+import com.cubic.autohome.common.view.image.core.assist.ImageScaleType;
+import com.cubic.autohome.common.view.image.utils.L;
+import com.cubic.autohome.common.view.image.utils.StorageUtils;
 
 public class Logo extends BaseActivity {
 
@@ -90,9 +107,62 @@ public class Logo extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		if (!ImageLoader.getInstance().isInited()) {
+			initImageConfig(this);
+		}
+		
 		Intent intent = getIntent();
 		if ("android.intent.action.VIEW".equals(intent.getAction())) {
 			this.isExternalJump = true;
+			Uri uri = intent.getData();
+			Log.d("JIMMY", "uri :" + uri);
+			if (uri != null) {
+				String typeStr = uri.getQueryParameter("type");
+				int typeInt = Integer.parseInt(typeStr);
+				this.articleType = typeInt;
+			} else {
+				this.isExternalJump = false;
+			}
+		}
+		if (Build.VERSION.SDK_INT < 0xE) {
+			
+		}
+	}
+	
+	private void initImageConfig(Context context) {
+		int maxmen = (int) Runtime.getRuntime().maxMemory();
+		int memoryCacheSize = maxmen / 0x8;
+		File cacheDir = StorageUtils.getOwnCacheDirectory(context,
+				"autohomemain/img");
+
+		DisplayImageOptions.Builder builder = new DisplayImageOptions.Builder();
+		builder.cacheOnDisk(true);
+		builder.cacheInMemory(true);
+		builder.imageScaleType(ImageScaleType.NONE);
+		DisplayImageOptions options = builder.build();
+
+		String cacheDirPath = Environment.getDataDirectory().getAbsolutePath();
+		cacheDirPath = cacheDirPath + File.separator + "cacheDir";
+		StorageUtils.getOwnCacheDirectory(context, cacheDirPath);
+		try {
+			ImageLoaderConfiguration.Builder configurationBuilder = new ImageLoaderConfiguration.Builder(
+					context);
+			configurationBuilder.threadPoolSize(0x5);
+			configurationBuilder.taskExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+			configurationBuilder
+					.taskExecutorForCachedImages(AsyncTask.THREAD_POOL_EXECUTOR);
+			configurationBuilder.denyCacheImageMultipleSizesInMemory();
+			configurationBuilder.memoryCache(new WeakMemoryCache());
+			DiskCache diskCache = new LruDiskCache(cacheDir,
+					new Md5FileNameGenerator(), 0x3200000);
+			configurationBuilder.diskCache(diskCache);
+			configurationBuilder.defaultDisplayImageOptions(options);
+			configurationBuilder.writeDebugLogs();
+			ImageLoaderConfiguration config = configurationBuilder.build();
+
+			ImageLoader.getInstance().init(config);
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 

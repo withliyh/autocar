@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.AHPullView android:id="@id/owner_collect_club_pullview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.cubic.autohome.common.view.AHListView android:id="@id/owner_collect_club_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:divider="@color/bgcolor04" android:dividerHeight="1.0px" />
+    </com.cubic.autohome.common.view.AHPullView>
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/owner_collect_club_errorlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

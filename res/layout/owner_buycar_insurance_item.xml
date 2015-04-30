@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/main_selector" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBox android:id="@id/owner_buycar_insurance_item_toggle" android:background="@drawable/checkbox_selector_transparency" android:focusable="true" android:clickable="true" android:duplicateParentState="false" android:layout_width="52.0dip" android:layout_height="60.0dip" android:button="@null" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/owner_buycar_insurance_item_label_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_toRightOf="@id/owner_buycar_insurance_item_toggle" android:layout_centerVertical="true">
+        <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor03" android:id="@id/owner_buycar_insurance_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/owner_buycar_insurance_item_option_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor04" android:id="@id/owner_buycar_insurance_item_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:singleLine="true" android:layout_toLeftOf="@id/owner_buycar_insurance_item_arrow" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/owner_buycar_insurance_item_arrow" android:background="@drawable/arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

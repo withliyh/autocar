@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/flipperLayout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.pinnedheader.PinnedHeaderListView android:id="@id/brands_list" android:scrollbars="none" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@android:color/transparent" android:divider="@color/bgcolor04" android:dividerHeight="1.0dip" />
+    <com.cubic.autohome.common.view.pinnedheader.LetterListView android:id="@id/MyLetterListView01" android:layout_width="22.0dip" android:layout_height="fill_parent" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/radio_poster_ImageView" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/icon" android:scaleType="center" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/play_pause_ImageView" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/radio_list_pause_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font06" android:textColor="@android:color/white" android:id="@id/radio_title_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/car_radio" android:layout_toRightOf="@id/radio_poster_ImageView" android:layout_centerVertical="true" />
+</RelativeLayout>

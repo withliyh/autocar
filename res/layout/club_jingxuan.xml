@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/jingxuan_bar_container" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <com.cubic.autohome.business.club.ui.view.ObservableHorizontalScrollView android:id="@id/jingxuan_bar_scrollview" android:scrollbars="none" android:layout_width="0.0dip" android:layout_height="@dimen/ah_common_top_tabs_hight" android:layout_weight="1.0">
+            <RadioGroup android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/jingxuan_radiogroup" android:paddingLeft="2.5dip" android:paddingRight="2.5dip" android:layout_width="fill_parent" android:layout_height="@dimen/ah_common_top_tabs_hight" />
+        </com.cubic.autohome.business.club.ui.view.ObservableHorizontalScrollView>
+        <ImageView android:id="@id/jingxuan_album" android:background="@drawable/bar_btn_album" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <com.cubic.autohome.common.view.AHLine android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <com.cubic.autohome.common.view.AHPullView android:id="@id/pullview_club" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+        <com.cubic.autohome.common.view.AHListView android:id="@id/listview_jing_xuan" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:divider="@color/bgcolor04" android:dividerHeight="1.0px" />
+    </com.cubic.autohome.common.view.AHPullView>
+</LinearLayout>

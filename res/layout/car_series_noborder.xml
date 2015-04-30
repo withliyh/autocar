@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/rootLayout" android:background="#ffefeeef" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/specLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ListView android:id="@id/specListView" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@color/bgcolor04" android:dividerHeight="1.0px" />
+            <TextView android:textSize="20.0sp" android:id="@id/nospecwords" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="该车系未上市" android:layout_below="@id/specListView" android:layout_centerHorizontal="true" />
+            <TextView android:id="@id/tvtv1" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="a" />
+            <TextView android:id="@id/tvtv2" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="E" />
+            <TextView android:id="@id/tvtv3" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="P" />
+            <TextView android:id="@id/tvtv4" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="U" />
+            <TextView android:id="@id/tvtv5" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="0.0dip" android:text="$" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

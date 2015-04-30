@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.business.club.ui.view.FullScreenVideoView android:id="@id/videoview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/upper_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/top_layout" android:background="#50000000" android:layout_width="fill_parent" android:layout_height="50.0dip">
+            <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor09" android:gravity="center_vertical" android:id="@id/video_player_return" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_returntext_white_selector" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+            <TextView android:textSize="18.0dip" android:textColor="@android:color/white" android:gravity="center" android:id="@id/video_local_play_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="预览" android:singleLine="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/bottom_layout" android:background="#50000000" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <SeekBar android:id="@id/sb_detail_play_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxHeight="10.0dip" android:max="100" android:progress="0" android:progressDrawable="@drawable/progress_holo_light" android:minHeight="10.0dip" android:thumb="@drawable/detail_icon_schedule_ball" android:thumbOffset="0.0dip" />
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_below="@id/sb_detail_play_progress">
+            <ImageView android:id="@id/play_btn" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="5.0dip" android:src="@drawable/video_btn_on" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/play_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:text="00:00" android:layout_toRightOf="@id/play_btn" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0dip" android:textColor="@android:color/white" android:id="@id/total_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="00:00" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ProgressBar android:id="@id/video_local_play_progress" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_centerInParent="true" style="@android:attr/progressBarStyleLarge" />
+</RelativeLayout>

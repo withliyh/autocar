@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="70.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RadioButton android:id="@id/sale_inquiry_public_item_cb" android:focusable="false" android:clickable="false" android:layout_width="22.0dip" android:layout_height="22.0dip" android:layout_marginLeft="15.0dip" android:button="@null" />
+    <LinearLayout android:orientation="vertical" android:id="@id/sale_inquiry_public_item_con" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <TextView android:textSize="@dimen/font05" android:id="@id/sale_inquiry_public_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font03" android:id="@id/sale_inquiry_public_item_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+    </LinearLayout>
+</LinearLayout>

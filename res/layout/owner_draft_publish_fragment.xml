@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/owner_draft_publish_root" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/owner_draft_publish_container" android:background="@color/bgcolor05" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginBottom="1.0dip">
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/owner_draft_publish_cancel" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="取消" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/owner_draft_publish_send" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="发送" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <EditText android:scrollbarStyle="outsideOverlay" android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:gravity="top" android:id="@id/owner_draft_publish_edittext" android:background="@color/bgcolor01" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="0.0dip" android:minHeight="260.0dip" android:text="" android:hint="" android:singleLine="false" android:layout_weight="1.0" android:lineSpacingMultiplier="1.2" />
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/imageView" android:layout_width="@dimen/smallimg_width" android:layout_height="@dimen/smallimg_high" android:scaleType="fitCenter" />
+    <TextView android:textSize="10.0dip" android:ellipsize="end" android:gravity="center" android:id="@id/txt_person_comment" android:background="@drawable/pic_menu_bar_bg" android:layout_width="@dimen/smallimg_width" android:layout_height="25.0dip" android:text="1234567890123" android:singleLine="true" android:layout_weight="1.0" android:layout_alignParentBottom="true" />
+</RelativeLayout>

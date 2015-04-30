@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/car_achart_container" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/achartlayout" android:layout_width="fill_parent" android:layout_height="300.0dip" android:layout_margin="8.0dip" />
+</RelativeLayout>

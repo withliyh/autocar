@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="news_gallery_height">400.0px</dimen>
+    <dimen name="seriesimg_gridview_margin_top">20.0px</dimen>
+    <dimen name="seriesimg_gridview_horizontalSpacing">20.0px</dimen>
+    <dimen name="seriesimg_gridview_verticalSpacing">20.0px</dimen>
+    <dimen name="smallimg_width">240.0px</dimen>
+    <dimen name="smallimg_high">180.0px</dimen>
+    <dimen name="activity_item_image_width">320.0dip</dimen>
+    <dimen name="activity_item_image_height">160.0dip</dimen>
+    <dimen name="activity_image_width">640.0px</dimen>
+    <dimen name="activity_image_height">320.0px</dimen>
+</resources>

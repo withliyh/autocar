@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bgcolor01" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv_watermark" android:background="@drawable/bg_marrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <RelativeLayout android:gravity="center_vertical" android:id="@id/titleLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/topicType" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:src="@drawable/shi" android:layout_alignParentTop="true" />
+        <TextView android:textSize="@dimen/font05" android:textColor="#ff000000" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/topicType" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/titleLayout">
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/txttime" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/replycount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:layout_gravity="right" android:id="@id/postUserName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:singleLine="true" android:layout_toLeftOf="@id/replycount" />
+    </RelativeLayout>
+</RelativeLayout>

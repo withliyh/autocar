@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/article_comment_label_item_container" android:focusable="false" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/article_comment_label_item_text" android:focusable="false" android:clickable="false" android:layout_width="60.0dip" android:layout_height="20.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+</FrameLayout>

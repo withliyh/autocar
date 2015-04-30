@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/reply" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginRight="20.0dip" android:text="回复" />
+    <TextView android:id="@id/copy" android:padding="10.0dip" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="复制" />
+</LinearLayout>

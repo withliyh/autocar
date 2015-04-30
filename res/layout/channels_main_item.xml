@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="70.0dip" android:layout_height="40.0dip">
+        <RelativeLayout android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center" android:id="@id/channels_main_item_title" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="测试" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <ImageButton android:id="@id/channels_main_item_del" android:background="@drawable/btn_delete_red" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:contentDescription="@null" />
+    </RelativeLayout>
+</LinearLayout>

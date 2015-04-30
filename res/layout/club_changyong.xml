@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <RelativeLayout android:id="@id/searchBar" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <RelativeLayout android:background="@drawable/main_btn_corners_grey" android:paddingLeft="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_centerVertical="true">
+                <ImageView android:id="@id/iv_search" android:background="@drawable/searchbar_icon_search" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font02" android:textColor="@color/textcolor01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="搜索论坛" android:layout_toRightOf="@id/iv_search" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <com.cubic.autohome.common.view.AHLine android:background="@color/bgcolor02" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/changyong_series" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="65.0dip">
+            <ImageView android:id="@id/image_series" android:background="@drawable/forum_icon_auto" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="10.0dip" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@id/image_series">
+                <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor06" android:id="@id/title_seriesclub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="车系论坛" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/sub_title_seriesclub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="为你的爱车找到队伍" android:layout_below="@id/title_seriesclub" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.cubic.autohome.common.view.AHLine android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/changyong_area" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="65.0dip">
+            <ImageView android:id="@id/image_area" android:background="@drawable/forum_icon_location" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="10.0dip" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@id/image_area">
+                <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor06" android:id="@id/title_areaclub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地区论坛" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/sub_title_areaclub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="老乡见老乡，两眼泪汪汪" android:layout_below="@id/title_areaclub" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.cubic.autohome.common.view.AHLine android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/changyong_theme" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="65.0dip">
+            <ImageView android:id="@id/image_theme" android:background="@drawable/forum_icon_theme" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_margin="10.0dip" android:layout_centerVertical="true" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_toRightOf="@id/image_theme">
+                <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor06" android:id="@id/title_themeclub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主题论坛" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/sub_title_themeclub" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="兴趣爱好的聚集地" android:layout_below="@id/title_themeclub" />
+            </LinearLayout>
+        </RelativeLayout>
+        <com.cubic.autohome.common.view.AHLine android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:id="@id/club_changyong_banner_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="15.0dip">
+            <com.cubic.autohome.common.view.RemoteImageView android:id="@id/club_changyong_banner_icon_1" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" />
+            <com.cubic.autohome.common.view.RemoteImageView android:id="@id/club_changyong_banner_img_1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scaleType="fitXY" />
+            <ImageView android:id="@id/club_changyong_banner_close_1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/adv_icon_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <com.cubic.autohome.common.view.pinnedheader.QuickIndexListView android:id="@id/lv_changyong_club" android:fadingEdge="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="#00000000" android:divider="@color/bgcolor02" android:dividerHeight="1.0px" isCustomView="true" isShowImg="true" />
+    </LinearLayout>
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/loadingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/search_recommend_more_item_container" android:background="@drawable/bg_list_item" android:layout_width="fill_parent" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="@color/textcolor02" android:id="@id/search_recommend_more_item_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看更多相关文章" />
+    <ImageView android:id="@id/search_recommend_more_item_img" android:background="@drawable/btn_icon_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+</LinearLayout>

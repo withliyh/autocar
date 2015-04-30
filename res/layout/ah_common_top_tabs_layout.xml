@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="@dimen/ah_common_top_tabs_hight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.AHPagerSlidingTabStrip android:id="@id/common_top_sorts_tabs" android:layout_width="0.0dip" android:layout_height="@dimen/ah_common_top_tabs_hight" android:layout_weight="1.0" />
+    <TextView android:id="@id/common_right_icon" android:background="@drawable/bar_btn_icon_search" android:layout_width="@dimen/ah_common_top_tabs_hight" android:layout_height="@dimen/ah_common_top_tabs_hight" android:layout_toRightOf="@id/common_top_sorts_tabs" />
+</LinearLayout>

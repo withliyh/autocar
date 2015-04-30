@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="@color/textcolor02" android:id="@id/tab_strip_muti_return_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/tabsub_main_return" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bar_btn_icon_returntext" android:layout_toLeftOf="@id/tab_strip_muti_return_button_text" android:layout_centerVertical="true" />
+</RelativeLayout>

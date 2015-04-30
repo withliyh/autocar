@@ -25,7 +25,7 @@ public class MyApplication extends Application {
 	private static MyApplication instance;
 	private AtSkinObserable mAtSkinObserable;
 	private ImageLoaderConfiguration mConfig;
-	
+	private static Context sContext;
 	
 	public static MyApplication getInstance() {
 
@@ -34,11 +34,15 @@ public class MyApplication extends Application {
 
 	}
 	
+	public static Context getContext() {
+		return sContext;
+	}
+	
 	@Override
 	public void onCreate() {
 		super.onCreate();
-		
 		instance = this;
+		sContext = getApplicationContext();
 	}
 	
 	

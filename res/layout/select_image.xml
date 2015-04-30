@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/select_image_layout" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/top_layout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:id="@id/tv_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="取消" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor03" android:id="@id/nativeTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="选择图片" android:layout_centerInParent="true" />
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:id="@id/tv_finish" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="完成" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.cubic.autohome.common.view.AHLine android:id="@id/line1" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/top_layout" />
+    <RelativeLayout android:id="@id/rl_number" android:background="@color/textcolor04" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:layout_width="wrap_content" android:layout_height="90.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <TextView android:textSize="16.0dip" android:id="@id/tv_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0/9" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <TextView android:textSize="16.0dip" android:gravity="center" android:id="@id/ImageCountHint" android:background="@color/textcolor04" android:layout_width="fill_parent" android:layout_height="90.0dip" android:hint="最多添加10张图片" android:layout_toLeftOf="@id/rl_number" android:layout_alignParentBottom="true" />
+    <HorizontalScrollView android:id="@id/hScrollLayout" android:background="@color/textcolor04" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_toLeftOf="@id/rl_number" android:layout_alignParentBottom="true">
+        <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/downLayout" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_alignParentBottom="true" />
+    </HorizontalScrollView>
+    <com.cubic.autohome.business.club.ui.view.ImagesGridView android:gravity="center" android:id="@id/gridview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="@dimen/seriesimg_gridview_margin_top" android:horizontalSpacing="@dimen/seriesimg_gridview_horizontalSpacing" android:verticalSpacing="@dimen/seriesimg_gridview_verticalSpacing" android:stretchMode="columnWidth" android:numColumns="4" android:layout_above="@id/hScrollLayout" android:layout_below="@id/top_layout" android:scrollbarFadeDuration="0" android:fadeScrollbars="false" />
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/loadingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/hScrollLayout" android:layout_below="@id/top_layout" />
+</RelativeLayout>

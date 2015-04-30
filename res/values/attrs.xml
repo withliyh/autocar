@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="title" format="string" localization="suggested" />
+    <attr name="sv_backgroundColor" format="reference|color" />
+    <attr name="sv_detailTextColor" format="reference|color" />
+    <attr name="sv_titleTextColor" format="reference|color" />
+    <attr name="sv_buttonBackgroundColor" format="reference|color" />
+    <attr name="sv_buttonForegroundColor" format="reference|color" />
+    <attr name="sv_buttonText" format="reference|string" />
+    <attr name="sv_detailTextAppearance" format="reference" />
+    <attr name="sv_titleTextAppearance" format="reference" />
+    <attr name="sv_showcaseColor" format="reference|color" />
+    <attr name="sv_tintButtonColor" format="reference|boolean" />
+    <attr name="showcaseViewStyle" format="reference" />
+    <attr name="isDropDownStyle" format="boolean" />
+    <attr name="isOnBottomStyle" format="boolean" />
+    <attr name="isAutoLoadOnBottom" format="boolean" />
+    <attr name="porterduffMode" format="boolean" />
+    <attr name="activeColor" format="color" />
+    <attr name="inactiveColor" format="color" />
+    <attr name="radius" format="dimension" />
+    <attr name="centered" format="boolean" />
+    <attr name="fadeOut" format="integer" />
+    <attr name="inactiveType">
+        <flag name="fill" value="0x00000001" />
+        <flag name="stroke" value="0x00000000" />
+    </attr>
+    <attr name="activeType">
+        <flag name="fill" value="0x00000001" />
+        <flag name="stroke" value="0x00000000" />
+    </attr>
+    <attr name="civ_border" format="boolean" />
+    <attr name="civ_borderColor" format="color" />
+    <attr name="civ_borderWidth" format="dimension" />
+    <attr name="civ_selector" format="boolean" />
+    <attr name="civ_selectorColor" format="color" />
+    <attr name="civ_selectorStrokeColor" format="color" />
+    <attr name="civ_selectorStrokeWidth" format="dimension" />
+    <attr name="civ_shadow" format="boolean" />
+    <attr name="civ_shadowRadius" format="float" />
+    <attr name="civ_shadowDx" format="float" />
+    <attr name="civ_shadowDy" format="float" />
+    <attr name="civ_shadowColor" format="color" />
+    <attr name="circularImageViewDefault" format="reference" />
+    <attr name="overscroll_translation" format="dimension" />
+    <attr name="overscroll_animation_duration" format="integer" />
+</resources>

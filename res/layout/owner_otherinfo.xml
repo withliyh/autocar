@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.cubic.autohome.common.view.AHPullView android:id="@id/owner_otherinfo_pullview" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.cubic.autohome.common.view.AHListView android:id="@id/owner_otherinfo_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:divider="@color/bgcolor04" android:dividerHeight="1.0dip" />
+    </com.cubic.autohome.common.view.AHPullView>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/showpicturelayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/ll_showpicture" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.cubic.autohome.common.view.AHFocusPager android:id="@id/focusPager" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        </LinearLayout>
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.cubic.autohome.business.article.ui.view.CircleFlowIndicator android:gravity="center" android:id="@id/indicator" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </FrameLayout>
+    <ViewStub android:id="@id/radio_Banners_layout" android:layout="@layout/radio_item_layout" android:layout_width="fill_parent" android:layout_height="80.0dip" android:layout_below="@id/showpicturelayout" />
+</RelativeLayout>

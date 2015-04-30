@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/ah_mutilineview_griditem_return_id" android:background="@drawable/owner_function_selector" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center" android:id="@id/ah_mutilineview_griditem_return" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:layout_centerInParent="true" />
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bar_btn_icon_returntext_selector" android:layout_toLeftOf="@id/ah_mutilineview_griditem_return" android:layout_centerVertical="true" />
+    <View android:id="@id/ah_mutilineview_griditem_return_bottomline" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    <View android:id="@id/ah_mutilineview_griditem_return_rightline" android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="44.0dip" android:layout_alignParentRight="true" />
+</RelativeLayout>

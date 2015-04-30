@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="@dimen/ah_common_top_tabs_hight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font03" android:textColor="#ff333333" android:gravity="center" android:id="@id/ah_listview_footer_TextView" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="@dimen/ah_common_top_tabs_hight" android:layout_centerInParent="true" />
+    <ProgressBar android:id="@id/ah_listview_footer_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:indeterminateDrawable="@anim/progress_style" android:layout_toLeftOf="@id/ah_listview_footer_TextView" android:layout_centerVertical="true" />
+</RelativeLayout>

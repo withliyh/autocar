@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.autohome"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="com.cubic.autohome"
+    android:versionCode="21"
+    android:versionName="5.0.1-1624448" >
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
 
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="21" />
 
     <application
+        android:hardwareAccelerated="true" 
+        android:largeHeap="true" 
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name="com.cubic.autohome.business.MyApplication" >
         <activity
-            android:name="com.cubic.autohome.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".business.Logo"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:pathPrefix="/open"
+                    android:scheme="autohome" />
             </intent-filter>
         </activity>
     </application>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bgcolor31" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/owner_user_top_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="190.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/owner_user_info" android:clickable="true" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginTop="22.0dip" android:layout_marginBottom="1.0dip">
+            <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/owner_user_pic" android:layout_width="67.5dip" android:layout_height="67.5dip" android:layout_marginLeft="15.0dip" android:src="@drawable/userpic_default" android:scaleType="fitXY" />
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font09" android:textColor="@color/textcolor06" android:id="@id/owner_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="用户名" android:singleLine="true" />
+                <ImageView android:id="@id/owner_user_vip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/user_icon_vip" android:layout_toRightOf="@id/owner_user_name" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/owner_user_point" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="积分：1000" android:layout_below="@id/owner_user_name" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/owner_user_weiwang" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:text="家油劵：100张" android:layout_toRightOf="@id/owner_user_point" android:layout_below="@id/owner_user_name" />
+            </RelativeLayout>
+            <ImageView android:id="@id/owner_user_info_arrow" android:background="@drawable/arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="60.0dip" android:layout_alignParentBottom="true">
+            <RelativeLayout android:id="@id/owner_user_review_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor01" android:gravity="center" android:id="@id/owner_user_review" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_icon_review" android:drawableTop="@drawable/icon_me_chat" android:drawablePadding="10.0dip" android:layout_centerInParent="true" />
+                <TextView android:textSize="10.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/owner_user_review_badge" android:background="@drawable/badge_view_bg" android:layout_width="18.0dip" android:layout_height="18.0dip" android:text="0" android:layout_toRightOf="@id/owner_user_review" android:layout_alignTop="@id/owner_user_review" />
+            </RelativeLayout>
+            <View android:id="@id/owner_user_top_space_1" android:background="@color/bgcolor33" android:layout_width="1.0px" android:layout_height="60.0dip" />
+            <RelativeLayout android:id="@id/owner_user_forum_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor01" android:gravity="center" android:id="@id/owner_user_forum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_icon_forum" android:drawableTop="@drawable/icon_me_forum" android:drawablePadding="10.0dip" android:layout_centerInParent="true" />
+                <TextView android:textSize="10.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/owner_user_forum_badge" android:background="@drawable/badge_view_bg" android:layout_width="18.0dip" android:layout_height="18.0dip" android:text="0" android:layout_toRightOf="@id/owner_user_forum" android:layout_alignTop="@id/owner_user_forum" />
+            </RelativeLayout>
+            <View android:id="@id/owner_user_top_space_2" android:background="@color/bgcolor33" android:layout_width="1.0px" android:layout_height="60.0dip" />
+            <RelativeLayout android:id="@id/owner_user_message_container" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor01" android:gravity="center" android:id="@id/owner_user_message" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/owner_icon_message" android:drawableTop="@drawable/icon_me_dms" android:drawablePadding="10.0dip" android:layout_centerInParent="true" />
+                <TextView android:textSize="10.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/owner_user_message_badge" android:background="@drawable/badge_view_bg" android:layout_width="18.0dip" android:layout_height="18.0dip" android:text="0" android:layout_toRightOf="@id/owner_user_message" android:layout_alignTop="@id/owner_user_message" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/owner_user_line_top_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/owner_user_top_layout">
+        <ImageView android:id="@id/owner_user_line_top" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="20.0dip" />
+    </RelativeLayout>
+    <ImageView android:id="@id/owner_user_line_top2" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="15.0dip" android:layout_below="@id/owner_user_line_top_layout" />
+    <RelativeLayout android:id="@id/owner_user_content_favorite_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_below="@id/owner_user_line_top2">
+        <RelativeLayout android:id="@id/owner_user_content_icon_favorite_layout" android:layout_width="42.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/owner_user_content_icon_favorite" android:background="@drawable/icon_me_star" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center_vertical" android:id="@id/owner_user_content_favorite" android:paddingLeft="3.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="我的收藏" android:drawableRight="@drawable/arrow_right" android:layout_toRightOf="@id/owner_user_content_icon_favorite_layout" />
+        <ImageView android:id="@id/owner_user_line_favorite" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_toRightOf="@id/owner_user_content_icon_favorite_layout" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/owner_user_content_topic_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_below="@id/owner_user_content_favorite_layout">
+        <RelativeLayout android:id="@id/owner_user_content_icon_topic_layout" android:layout_width="42.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/owner_user_content_icon_topic" android:background="@drawable/icon_me_zhutie" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center_vertical" android:id="@id/owner_user_content_topic" android:paddingLeft="3.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="我的主帖" android:drawableRight="@drawable/arrow_right" android:layout_toRightOf="@id/owner_user_content_icon_topic_layout" />
+        <ImageView android:id="@id/owner_user_line_topic" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_toRightOf="@id/owner_user_content_icon_topic_layout" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/owner_user_content_history_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_below="@id/owner_user_content_topic_layout">
+        <RelativeLayout android:id="@id/owner_user_content_icon_history_layout" android:layout_width="42.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/owner_user_content_icon_history" android:background="@drawable/icon_me_history" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center_vertical" android:id="@id/owner_user_content_history" android:paddingLeft="3.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="浏览历史" android:drawableRight="@drawable/arrow_right" android:layout_toRightOf="@id/owner_user_content_icon_history_layout" />
+        <ImageView android:id="@id/owner_user_line_history" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_toRightOf="@id/owner_user_content_icon_history_layout" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/owner_user_content_draftbox_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_below="@id/owner_user_content_history_layout">
+        <RelativeLayout android:id="@id/owner_user_content_icon_draftbox_layout" android:layout_width="42.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/owner_user_content_icon_draftbox" android:background="@drawable/icon_me_draft" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center_vertical" android:id="@id/owner_user_content_draftbox" android:paddingLeft="3.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="草稿箱" android:drawableRight="@drawable/arrow_right" android:layout_toRightOf="@id/owner_user_content_icon_draftbox_layout" />
+        <TextView android:textSize="10.0dip" android:textColor="@color/textcolor09" android:gravity="center" android:id="@id/owner_user_draftbox_badge" android:background="@drawable/badge_view_bg" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_marginRight="30.0dip" android:text="99+" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/owner_user_line_draftbox" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/owner_user_line_top_setting" android:background="@color/bgcolor33" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="15.0dip" android:layout_below="@id/owner_user_content_draftbox_layout" />
+    <RelativeLayout android:id="@id/owner_user_content_setting_layout" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="55.0dip" android:layout_below="@id/owner_user_line_top_setting">
+        <RelativeLayout android:id="@id/owner_user_content_icon_setting_layout" android:layout_width="42.0dip" android:layout_height="fill_parent">
+            <ImageView android:id="@id/owner_user_content_icon_setting" android:background="@drawable/icon_me_setting" android:layout_width="18.0dip" android:layout_height="18.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center_vertical" android:id="@id/owner_user_content_setting" android:paddingLeft="3.0dip" android:paddingRight="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="设置" android:drawableRight="@drawable/arrow_right" android:layout_toRightOf="@id/owner_user_content_icon_setting_layout" />
+        <ImageView android:id="@id/owner_user_line_bottom_setting" android:background="@color/bgcolor33" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</RelativeLayout>

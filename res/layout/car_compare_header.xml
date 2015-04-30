@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/rl_list_header" android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="35.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@color/textcolor03" android:gravity="center_vertical" android:layout_gravity="center|left" android:id="@id/list_header_title" android:paddingLeft="20.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="                                                              " />
+    <TextView android:textSize="14.0sp" android:textColor="@color/textcolor03" android:gravity="center_vertical" android:layout_gravity="center|right" android:id="@id/head_tips" android:paddingLeft="5.0dip" android:paddingRight="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="注：●标配  ○选配  -无" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/head_tips_divider" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</FrameLayout>

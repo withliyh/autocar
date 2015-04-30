@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/option_container" android:background="@color/bgcolor01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/optionLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/lv_onlylook" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:id="@id/txtOnlyLook" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="只看楼主" android:layout_centerVertical="true" />
+            <com.cubic.autohome.common.view.AHSlipButton android:layout_gravity="center|right" android:id="@id/option_onlylooklouzhu" android:layout_width="80.0dip" android:layout_height="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/onlylookline" android:background="@color/bgcolor04" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" />
+        <RelativeLayout android:id="@id/lv_spmode" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:id="@id/txtSpmode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="小图模式" android:layout_centerVertical="true" />
+            <com.cubic.autohome.common.view.AHSlipButton android:layout_gravity="center|right" android:id="@id/option_spmode" android:layout_width="80.0dip" android:layout_height="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/spmode_line" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:id="@id/txtNightMode" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="夜间模式" android:layout_centerVertical="true" />
+            <com.cubic.autohome.common.view.AHSlipButton android:layout_gravity="center|right" android:id="@id/option_nightmode" android:layout_width="80.0dip" android:layout_height="28.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/nightMode_line" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+            <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:id="@id/txtFontSize" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="字体大小" android:layout_centerVertical="true" />
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="400.0dip" android:layout_height="wrap_content" android:weightSum="3.0" android:layout_alignParentRight="true">
+                <LinearLayout android:gravity="center" android:id="@id/fontBigLayout" android:clickable="true" android:layout_width="50.0dip" android:layout_height="30.0dip" android:layout_alignParentRight="true">
+                    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:gravity="center" android:id="@id/textsize_big_tv" android:background="@drawable/circle_corners" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:text="大" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/fontMiddleLayout" android:clickable="true" android:layout_width="50.0dip" android:layout_height="30.0dip" android:layout_toLeftOf="@id/fontBigLayout">
+                    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:gravity="center" android:id="@id/textsize_middle_tv" android:background="@drawable/circle_corners" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:text="中" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:id="@id/fontSmallLayout" android:clickable="true" android:layout_width="50.0dip" android:layout_height="30.0dip" android:layout_toLeftOf="@id/fontMiddleLayout">
+                    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/textsize_small_tv" android:background="@drawable/circle_corners" android:clickable="false" android:layout_width="30.0dip" android:layout_height="30.0dip" android:text="小" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/fontLine" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" />
+    </LinearLayout>
+    <HorizontalScrollView android:id="@id/fs_layout" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/favoritorLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip">
+                <ImageView android:id="@id/favoritor" android:background="@drawable/share_icon_collect_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtCollection" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="　收藏　" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/wechatLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/favoritorLayout">
+                <ImageView android:id="@id/share_wechat" android:background="@drawable/share_icon_wechat_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtWechat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="微信好友" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/wechatfriendsLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/wechatLayout">
+                <ImageView android:id="@id/share_wechatfriends" android:background="@drawable/share_icon_wechatfriends_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtWechatfriends" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="朋友圈" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/qqLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/wechatfriendsLayout">
+                <ImageView android:id="@id/share_qq" android:background="@drawable/share_icon_qq_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtQQ" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QQ" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/qqzoneLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/qqLayout">
+                <ImageView android:id="@id/share_qqzone" android:background="@drawable/share_icon_qqzone_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtQQzone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="QQ空间" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/sinaweiboLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_toRightOf="@id/qqzoneLayout">
+                <ImageView android:id="@id/share_sinaweibo" android:background="@drawable/share_icon_sinaweibo_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtSinaweibo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="新浪微博" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/tencentweiboLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/sinaweiboLayout">
+                <ImageView android:id="@id/share_tencentweibo" android:background="@drawable/share_icon_tencentweibo_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtTencentweibo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="腾讯微博" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/messageLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_toRightOf="@id/tencentweiboLayout">
+                <ImageView android:id="@id/share_message" android:background="@drawable/share_icon_information_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtMessage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="短信" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/emailLayout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_toRightOf="@id/messageLayout" android:layout_alignParentRight="true">
+                <ImageView android:id="@id/share_email" android:background="@drawable/share_icon_email_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" />
+                <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/txtEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="邮件" />
+            </LinearLayout>
+        </RelativeLayout>
+    </HorizontalScrollView>
+    <ImageView android:id="@id/cancel_line" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" />
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center" android:id="@id/canceloption" android:background="@color/bgcolor03" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="取 消" />
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/main_selector" android:paddingLeft="10.0dip" android:paddingTop="15.0dip" android:paddingRight="10.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor04" android:id="@id/owner_posts_item_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="内容" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/owner_posts_item_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="09-27" android:layout_below="@id/owner_posts_item_content" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/owner_posts_item_replycount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="回" android:layout_alignBaseline="@id/owner_posts_item_date" android:layout_alignParentRight="true" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/owner_posts_item_clubname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:text="论坛名" android:layout_toLeftOf="@id/owner_posts_item_replycount" android:layout_alignBaseline="@id/owner_posts_item_date" />
+</RelativeLayout>

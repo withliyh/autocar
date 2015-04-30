@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/logo_bottomLayout" android:layout_width="fill_parent" android:layout_height="100.0dip" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/startup_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:src="@drawable/start_ad_logo" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font11" android:textColor="@color/textcolor09" android:id="@id/tv_version" android:background="@color/bgcolor18" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="Android 4.2.5" android:layout_toRightOf="@id/startup_logo" android:layout_alignTop="@id/startup_logo" />
+        <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:src="@drawable/sf" android:layout_toRightOf="@id/tv_version" android:layout_alignBottom="@id/tv_version" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor04" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="我的汽车网站 我的汽车之家" android:layout_toRightOf="@id/startup_logo" android:layout_alignBottom="@id/startup_logo" />
+    </RelativeLayout>
+    <com.cubic.autohome.common.view.RemoteImageView android:id="@id/img_startup" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" android:layout_above="@id/logo_bottomLayout" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor09" android:id="@id/tv_pass" android:background="#5e000000" android:paddingLeft="5.0dip" android:paddingTop="2.0dip" android:paddingRight="5.0dip" android:paddingBottom="2.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:text="点击跳过" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <LinearLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="5.0" />
+    <LinearLayout android:background="@drawable/start_logo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0dip" android:id="@id/version_name" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+    <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="10.0">
+        <ImageView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/sf" />
+        <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="40.0dip" android:text="三方联合首发" />
+    </LinearLayout>
+    <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的汽车网站  我的汽车之家" />
+    <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="www.autohome.com.cn" />
+    <LinearLayout android:visibility="gone" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/rootlayout" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/headerLayout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:gravity="center" android:id="@id/btn_reply" android:background="@drawable/tag_two_first" android:layout_width="0.0dip" android:layout_height="30.0dip" android:text="最后回复" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/btn_new" android:background="@drawable/tag_two_first" android:layout_width="0.0dip" android:layout_height="30.0dip" android:text="最新发布" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/btn_jinghua" android:background="@drawable/tag_two_first" android:layout_width="0.0dip" android:layout_height="30.0dip" android:text="精华帖" android:layout_weight="1.0" />
+        <TextView android:gravity="center" android:id="@id/btn_quality" android:background="@drawable/tag_two_third_v" android:layout_width="0.0dip" android:layout_height="30.0dip" android:text="质量反馈" android:layout_weight="1.0" />
+    </LinearLayout>
+    <com.cubic.autohome.common.view.AHLine android:id="@id/line1" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/headerLayout" />
+    <RelativeLayout android:id="@id/clublistLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="1.0px" android:layout_below="@id/headerLayout">
+        <com.cubic.autohome.common.view.AHPullView android:id="@id/pulldown" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.cubic.autohome.common.view.AHListView android:id="@id/topicView" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@android:color/transparent" android:cacheColorHint="@android:color/transparent" android:divider="@color/bgcolor04" android:dividerHeight="1.0px" />
+        </com.cubic.autohome.common.view.AHPullView>
+    </RelativeLayout>
+    <com.cubic.autohome.common.view.AHErrorLayout android:id="@id/loadingLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/headerLayout" />
+</RelativeLayout>

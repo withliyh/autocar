@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/bulletin_attach_container" android:background="@color/bgcolor29" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/bulletin_content_attachment_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/logo_640_480_99" android:scaleType="centerCrop" android:adjustViewBounds="true" />
+    <ImageView android:id="@id/bulletin_page_play_icon" android:background="@drawable/icon_play_big" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:focusable="false" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/car_used_car_spec_config_activity_main_nav" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <FrameLayout android:id="@id/car_used_car_spec_config_activity_main_tabs_frame" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <com.cubic.autohome.common.view.AHPagerSlidingTabStrip android:id="@id/car_used_car_spec_config_activity_main_tabs" android:background="@color/bgcolor05" android:layout_width="fill_parent" android:layout_height="44.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="44.0dip">
+                <ImageView android:id="@id/car_used_car_spec_config_activity_main_nav_leftarrow" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/nav_arrow_left" />
+                <ImageView android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ImageView android:id="@id/car_used_car_spec_config_activity_nav_rightarrow" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/nav_arrow_right" />
+            </LinearLayout>
+        </FrameLayout>
+        <com.cubic.autohome.common.view.AHDrawableCenterTextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:gravity="center_vertical" android:id="@id/car_used_car_spec_config_activity_main_return" android:clickable="true" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="@string/tabsub_main_return" android:drawableLeft="@drawable/bar_btn_icon_returntext_selector" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <TextView android:id="@id/car_used_car_spec_config_activity_line" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/car_used_car_spec_config_activity_main_nav" />
+    <com.cubic.autohome.common.view.AHViewPager android:id="@id/car_used_car_spec_config_activity_viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/car_used_car_spec_config_activity_line" android:overScrollMode="never" />
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <SlidingDrawer android:orientation="horizontal" android:id="@id/ah_drawer" android:layout_width="fill_parent" android:layout_height="fill_parent" android:handle="@id/handle" android:content="@id/content">
+        <Button android:id="@id/handle" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+        <RelativeLayout android:orientation="vertical" android:id="@id/content" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <RelativeLayout android:id="@id/drawer_operation_layout_child" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:id="@id/tv_back" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="返回" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:id="@id/tv_close" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="关闭" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor01" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <com.cubic.autohome.common.view.AHLine android:id="@id/drawerLine" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/drawer_operation_layout_child" />
+            <LinearLayout android:orientation="vertical" android:id="@id/subdrawer_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/drawerLine" />
+        </RelativeLayout>
+    </SlidingDrawer>
+</LinearLayout>

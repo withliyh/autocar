@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/main_selector" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.RemoteImageView android:id="@id/owner_app_item_image" android:focusable="false" android:clickable="false" android:layout_width="50.0dip" android:layout_height="50.0dip" android:layout_marginRight="15.0dip" android:layout_centerVertical="true" />
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:id="@id/owner_app_item_title" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/owner_app_item_image" android:layout_alignParentTop="true" />
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor01" android:id="@id/owner_app_item_description" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" android:singleLine="true" android:layout_toRightOf="@id/owner_app_item_image" android:layout_alignParentBottom="true" />
+</RelativeLayout>

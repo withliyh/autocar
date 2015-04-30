@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:id="@id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="车身外观" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor05" android:id="@id/tvNumber" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="120张" android:layout_toRightOf="@id/tvTitle" android:layout_alignBottom="@id/tvTitle" />
+        <TextView android:textSize="@dimen/font04" android:textColor="@color/textcolor02" android:id="@id/tvAll" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="查看所有" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView android:textColor="@color/textcolor01" android:gravity="center" android:id="@id/owner_contrast_tip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="车型库还空着呐！添加车型对比吧" />
+    <TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/owner_contrast_go" android:background="@drawable/main_commit" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="15.0dip" android:text="开始对比" android:layout_alignParentBottom="true" />
+    <ListView android:id="@id/owner_contrast_list" android:visibility="gone" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:divider="@color/bgcolor04" android:dividerHeight="1.0px" android:layout_above="@id/owner_contrast_go" android:layout_alignParentTop="true" />
+</RelativeLayout>

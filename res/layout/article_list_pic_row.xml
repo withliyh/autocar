@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_list_item" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:ellipsize="marquee" android:id="@id/article_list_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/newslist_img_layout" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_marginTop="10.0dip" android:layout_below="@id/article_list_item_title" android:layout_alignLeft="@id/article_list_item_title">
+        <com.cubic.autohome.common.view.FixedScaleRemoteImageView android:id="@id/newslist_img1" android:layout_width="0.0dip" android:layout_height="72.0dip" android:scaleType="fitXY" android:layout_weight="1.0" />
+        <com.cubic.autohome.common.view.FixedScaleRemoteImageView android:id="@id/newslist_img2" android:layout_width="0.0dip" android:layout_height="72.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:scaleType="fitXY" android:layout_weight="1.0" />
+        <com.cubic.autohome.common.view.FixedScaleRemoteImageView android:id="@id/newslist_img3" android:layout_width="0.0dip" android:layout_height="72.0dip" android:scaleType="fitXY" android:layout_weight="1.0" />
+    </LinearLayout>
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/article_list_item_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/newslist_img_layout" android:layout_alignLeft="@id/newslist_img_layout" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/article_list_item_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBaseline="@id/article_list_item_date" android:layout_alignRight="@id/newslist_img_layout" android:layout_alignBottom="@id/article_list_item_date" />
+</RelativeLayout>

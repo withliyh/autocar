@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/owner_setup_feedback_feedlayout" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <FrameLayout android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor01" android:id="@id/owner_setup_feedback_my_feed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="我的反馈" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/textcolor01" android:layout_gravity="right" android:id="@id/owner_setup_feedback_feedtime" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </FrameLayout>
+        <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:id="@id/owner_setup_feedback_feedcontent" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_feedcontent_image_1" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_feedcontent_image_2" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <com.cubic.autohome.common.view.RemoteImageView android:layout_gravity="center" android:id="@id/owner_setup_feedback_feedcontent_image_3" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+            <com.cubic.autohome.common.view.RemoteImageView android:id="@id/owner_setup_feedback_feedcontent_image_4" android:visibility="gone" android:layout_width="60.0dip" android:layout_height="60.0dip" android:layout_margin="10.0dip" android:scaleType="centerCrop" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/owner_setup_feedback_answerlayout" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <RelativeLayout android:orientation="vertical" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="16.0dip" android:textColor="@color/textcolor01" android:id="@id/owner_setup_feedback_answer_feed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="反馈回复" />
+            <TextView android:textSize="14.0dip" android:textColor="@color/textcolor01" android:id="@id/owner_setup_feedback_answertime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <TextView android:textSize="16.0dip" android:textColor="@color/textcolor04" android:id="@id/owner_setup_feedback_answercontent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+    </LinearLayout>
+</LinearLayout>

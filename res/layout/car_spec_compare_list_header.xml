@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/car_compare_header2" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="90.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center|left" android:orientation="horizontal" android:id="@id/imglayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="25.0dip">
+        <ImageView android:id="@id/compare_divider1" android:background="@color/bgcolor03" android:layout_width="1.0px" android:layout_height="fill_parent" />
+        <RelativeLayout android:id="@id/spec_compare_leftLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="90.0dip" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/spec_compare_addSpec_leftLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                <ImageView android:id="@id/spec_compare_addSpec_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:layout_gravity="center" android:id="@id/spec_compare_addSpec_text_left" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="添加车型" android:drawableTop="@drawable/bar_btn_icon_addvs" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center|left" android:id="@id/txtCompareLeft" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ImageView android:id="@id/spec_compare_leftCLose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/publish_icon_delete" />
+            </LinearLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/compare_divider3" android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_marginRight="2.0dip" />
+        <RelativeLayout android:id="@id/spec_compare_rightLayout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="90.0dip" android:layout_weight="1.0">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/spec_compare_addSpec_rightLayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+                <ImageView android:id="@id/spec_compare_addSpec_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+                <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor02" android:layout_gravity="center" android:id="@id/spec_compare_addSpec_text_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="添加车型" android:drawableTop="@drawable/bar_btn_icon_addvs" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:gravity="center|left" android:id="@id/txtCompareRight" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0" />
+                <ImageView android:id="@id/spec_compare_rightCLose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/publish_icon_delete" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <TextView android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.3" />
+    <com.cubic.autohome.common.view.RemoteImageView android:id="@id/car_compare_left" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="70.0dip" android:layout_margin="10.0dip" android:layout_weight="1.0" />
+    <com.cubic.autohome.common.view.RemoteImageView android:id="@id/car_compare_right" android:visibility="gone" android:layout_width="50.0dip" android:layout_height="70.0dip" android:layout_margin="10.0dip" android:layout_weight="1.0" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.RemoteImageView android:id="@id/search_club_item_img" android:tag="1" android:layout_width="80.0dip" android:layout_height="60.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:scaleType="fitXY" />
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:id="@id/search_club_item_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/search_club_item_img" android:layout_alignTop="@id/search_club_item_img" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/search_club_item_subtitle" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/search_club_item_img" android:layout_alignBottom="@id/search_club_item_img" />
+</RelativeLayout>

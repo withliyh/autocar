@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/changyong_series_header" android:layout_width="0.0dip" android:layout_height="75.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/image_series" android:background="@drawable/forum_icon_auto" android:layout_width="35.0dip" android:layout_height="35.0dip" />
+        <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor06" android:id="@id/title_series" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="车系论坛" />
+    </LinearLayout>
+    <com.cubic.autohome.common.view.AHLine android:id="@id/header_line1" android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="75.0dip" color="3" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/changyong_area_header" android:layout_width="0.0dip" android:layout_height="75.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/image_area" android:background="@drawable/forum_icon_location" android:layout_width="35.0dip" android:layout_height="35.0dip" />
+        <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor06" android:id="@id/title_area" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="地区论坛" />
+    </LinearLayout>
+    <com.cubic.autohome.common.view.AHLine android:id="@id/header_line2" android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="75.0dip" color="3" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/changyong_theme_header" android:layout_width="0.0dip" android:layout_height="75.0dip" android:layout_weight="1.0">
+        <ImageView android:id="@id/image_theme" android:background="@drawable/forum_icon_theme" android:layout_width="35.0dip" android:layout_height="35.0dip" />
+        <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor06" android:id="@id/title_theme" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="主题论坛" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.NativeImageView android:layout_gravity="center" android:id="@id/imageView" android:layout_width="100.0dip" android:layout_height="75.0dip" android:scaleType="fitCenter" />
+    <RadioButton android:id="@id/radio_select" android:background="@drawable/radio_select" android:focusable="false" android:clickable="false" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:checked="false" android:button="@null" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

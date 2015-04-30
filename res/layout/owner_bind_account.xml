@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/owner_bind_account_usr_container" android:background="@color/bgcolor04" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="35.0dip">
+        <com.cubic.autohome.common.view.AHLoginCombox android:id="@id/owner_bind_account_input_combox" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <AutoCompleteTextView android:textSize="@dimen/font03" android:textColor="@color/textcolor04" android:textColorHint="@color/textcolor01" android:id="@id/owner_bind_account_input_usr" android:background="@color/bgcolor01" android:paddingLeft="15.0dip" android:paddingRight="38.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:hint="@string/owner_login_username" android:singleLine="true" android:maxLength="20" android:imeOptions="actionNext" />
+        </com.cubic.autohome.common.view.AHLoginCombox>
+        <ImageButton android:id="@id/owner_bind_account_input_usr_clear" android:background="@drawable/login_input_delete_btn" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/owner_bind_account_pwd_container" android:background="@color/bgcolor04" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <EditText android:textSize="@dimen/font03" android:textColor="@color/textcolor04" android:textColorHint="@color/textcolor01" android:id="@id/owner_bind_account_input_pwd" android:background="@color/bgcolor01" android:paddingLeft="15.0dip" android:paddingRight="38.0dip" android:layout_width="fill_parent" android:layout_height="44.0dip" android:hint="@string/owner_login_password" android:singleLine="true" android:inputType="textPassword" android:imeOptions="actionDone" />
+        <ImageButton android:id="@id/owner_bind_account_input_pwd_clear" android:background="@drawable/login_input_delete_btn" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font05" android:textColor="@color/public_button_text" android:gravity="center" android:id="@id/owner_bind_account_bind" android:background="@drawable/public_button" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="25.0dip" android:layout_marginRight="10.0dip" android:text="关联帐号" />
+</LinearLayout>

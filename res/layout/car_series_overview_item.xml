@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:gravity="center_vertical" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor06" android:id="@id/txtSpecName" android:tag="106" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/txtStructure" android:tag="101" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="15.0dip" android:layout_below="@id/txtSpecName" />
+        <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor07" android:id="@id/txtPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignBottom="@id/txtStructure" android:layout_alignParentRight="true" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/minprice_textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="全国最低价：" android:layout_toLeftOf="@id/txtPrice" android:layout_alignBottom="@id/txtPrice" />
+        <com.cubic.autohome.common.view.AHLine android:id="@id/line1" android:background="@color/bgcolor02" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="15.0dip" android:layout_below="@id/txtStructure" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="35.0dip" android:layout_below="@id/line1">
+            <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/buycarLayout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_buycar" android:background="@drawable/btn_icon_calculate" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/font02" android:textColor="@color/textcolor02" android:layout_gravity="center_vertical" android:id="@id/tv_buycar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="购车计算" />
+                </LinearLayout>
+                <com.cubic.autohome.common.view.AHLine android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/compareLayout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_compare" android:background="@drawable/btn_icon_vs" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/font02" android:textColor="@color/textcolor02" android:layout_gravity="center_vertical" android:id="@id/tv_compare" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="添加对比" />
+                </LinearLayout>
+                <com.cubic.autohome.common.view.AHLine android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="fill_parent" />
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/askpriceLayout" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/iv_askprice" android:background="@drawable/btn_icon_inquiry" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <TextView android:textSize="@dimen/font02" android:textColor="@color/textcolor02" android:layout_gravity="center_vertical" android:id="@id/tv_askprice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="询最低价" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:id="@id/wide_divider" android:background="@color/bgcolor06" android:layout_width="fill_parent" android:layout_height="20.0dip" />
+</LinearLayout>

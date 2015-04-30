@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/series_koubei_list_header_container" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="horizontal" android:id="@id/middleLayout" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip">
+        <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@id/imgAverage" android:layout_width="44.0dip" android:layout_height="44.0dip">
+            <ImageView android:id="@id/ImgKoubei" android:background="@drawable/fame_icon_fraction" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/tvkoubei_average" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/imgAverage" android:layout_alignTop="@id/imgAverage">
+            <TextView android:textSize="@dimen/font09" android:textColor="@color/textcolor06" android:id="@id/tvKoubei" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="4.29" />
+            <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor06" android:id="@id/tvKoubeiLabel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="分" android:layout_toRightOf="@id/tvKoubei" android:layout_alignBaseline="@id/tvKoubei" />
+        </RelativeLayout>
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor01" android:id="@id/tvPersonCount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="833人参与" android:layout_toRightOf="@id/imgAverage" android:layout_alignBottom="@id/imgAverage" />
+    </RelativeLayout>
+    <com.cubic.autohome.common.view.AHTabBar android:id="@id/tabBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/middleLayout" />
+</RelativeLayout>

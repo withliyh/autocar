@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/bulletin_comment_up_container" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor06" android:gravity="center" android:id="@id/ah_bulletin_comment_up_drawer_reply" android:background="@drawable/bg_list_item" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="回复" />
+    <View android:id="@id/ah_bulletin_comment_up_drawer_line1" android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor06" android:gravity="center" android:id="@id/ah_bulletin_comment_up_drawer_copy" android:background="@drawable/bg_list_item" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="复制" />
+    <View android:id="@id/ah_bulletin_comment_up_drawer_line2" android:background="@color/bgcolor03" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor06" android:gravity="center" android:id="@id/ah_bulletin_comment_up_drawer_cancel" android:background="@drawable/bg_list_item" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="取消" />
+</LinearLayout>

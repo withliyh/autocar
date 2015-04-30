@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/car_series_header" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/picLayout" android:background="@drawable/summary_pic_shadow" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor09" android:id="@id/tv_picLeft" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/textcolor09" android:id="@id/tv_picRight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/headInfoLayout" android:background="@color/bgcolor01" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/picLayout">
+        <RelativeLayout android:id="@id/toplayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="@dimen/font06" android:textStyle="bold" android:textColor="@color/textcolor06" android:id="@id/tvBrand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="奥迪" android:layout_centerVertical="true" />
+            <TextView android:textSize="@dimen/font06" android:textColor="@color/textcolor07" android:id="@id/tvPrice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="27.2万" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.cubic.autohome.common.view.AHLine android:id="@id/line2" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="10.0dip" android:layout_below="@id/toplayout" />
+        <LinearLayout android:orientation="vertical" android:id="@id/car_series_list_header_carmall" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/line2">
+            <TextView android:id="@id/car_series_list_header_carmall_divider" android:layout_width="fill_parent" android:layout_height="15.0dip" />
+            <RelativeLayout android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="40.0dip">
+                <TextView android:textSize="@dimen/font03" android:textColor="@color/textcolor03" android:id="@id/car_series_list_header_carmall_l" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="点击进入车商城限时特卖活动" android:layout_centerVertical="true" />
+                <TextView android:textSize="@dimen/font02" android:textColor="@color/textcolor08" android:id="@id/car_series_list_header_carmall_r" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="特价购买" android:drawableLeft="@drawable/icon_special" android:drawablePadding="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                <com.cubic.autohome.common.view.AHLine android:id="@id/car_series_list_header_carmall_c" android:background="@color/bgcolor04" android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_toLeftOf="@id/car_series_list_header_carmall_r" android:layout_centerVertical="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <com.cubic.autohome.common.view.AHLine android:id="@id/line4" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/car_series_list_header_carmall" />
+        <TextView android:textSize="@dimen/font05" android:textColor="@color/textcolor01" android:id="@id/nodataTv" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="暂无车型" android:drawableLeft="@drawable/forum_quote_icon_sigh" android:drawablePadding="3.0dip" android:layout_below="@id/line4" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/car_series_list_header_all_layout" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/line4">
+            <include android:id="@id/seriesKoubei_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:layout_weight="1.0" layout="@layout/car_series_list_header_item" />
+            <include android:id="@id/seriesDealer_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_weight="1.0" layout="@layout/car_series_list_header_item" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/car_series_list_header_all_layout2" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/car_series_list_header_all_layout">
+            <include android:id="@id/sale_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" layout="@layout/car_series_list_header_item" />
+            <include android:id="@id/usedcar_layout" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_weight="1.0" layout="@layout/car_series_list_header_item" />
+        </LinearLayout>
+        <com.cubic.autohome.common.view.AHLine android:id="@id/car_series_list_header_line1" android:background="@color/bgcolor02" android:layout_width="1.0px" android:layout_height="fill_parent" android:layout_below="@id/car_series_list_header_all_layout" />
+        <com.cubic.autohome.common.view.AHLine android:id="@id/line5" android:background="@color/bgcolor04" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="10.0dip" android:layout_below="@id/car_series_list_header_all_layout2" />
+        <com.cubic.autohome.common.view.AHTabBar android:id="@id/tabBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/line5" />
+    </RelativeLayout>
+</RelativeLayout>

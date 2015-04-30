@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@android:color/transparent" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/fm_title_layout" android:layout_width="fill_parent" android:layout_height="20.0dip">
+        <TextView android:textSize="@dimen/font06" android:textColor="@color/night_textcolor01" android:id="@id/radio_title_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/fm_anim_ImageView" android:layout_width="12.0dip" android:layout_height="12.0dip" android:layout_marginLeft="5.0dip" android:layout_marginBottom="1.0dip" android:src="@drawable/radio_item_anim" android:layout_toRightOf="@id/radio_title_TextView" android:layout_alignParentBottom="true" />
+        <TextView android:textSize="@dimen/font01" android:textColor="@color/night_textcolor01" android:id="@id/radio_state_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_alignBottom="@id/radio_title_TextView" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/night_textcolor01" android:id="@id/radio_info_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_below="@id/fm_title_layout" />
+    <TextView android:textSize="@dimen/font01" android:textColor="@color/night_textcolor01" android:id="@id/radio_time_TextView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:layout_alignBottom="@id/radio_info_TextView" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.cubic.autohome.common.view.AHPullView android:id="@id/pullview_club" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.cubic.autohome.common.view.AHListView android:id="@id/listview_jing_hua" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#ffffffff" android:divider="@color/bgcolor02" android:dividerHeight="1.0px" />
+    </com.cubic.autohome.common.view.AHPullView>
+</LinearLayout>
