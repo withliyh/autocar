@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.cubic.autohome.R;
 import com.cubic.autohome.business.MyApplication;
+import com.cubic.autohome.common.helper.storage.SpHelper;
 import com.cubic.autohome.common.util.DiskUtil;
 
 public class DataCache {
