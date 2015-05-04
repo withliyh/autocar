@@ -12,7 +12,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
 import android.os.Handler;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -124,9 +126,43 @@ public class Logo extends BaseActivity {
 				this.isExternalJump = false;
 			}
 		}
-		if (Build.VERSION.SDK_INT < 0xE) {
-			
+		requestWindowFeature(1);
+		setContentView(2130903389);
+		getWindow().setFlags(1024, 1024);
+		DisplayMetrics dm = new DisplayMetrics();
+		getWindowManager().getDefaultDisplay().getMetrics(dm);
+		DataCache.setPhoneDensity(dm.density);
+		DataCache.setScreenWidth(dm.widthPixels);
+		DataCache.setScreenHeight(dm.heightPixels);
+		DataCache.setScreenWidthForPage();
+		Log.d("LogoActivity", "手机屏幕分辨率为：" + dm.widthPixels + "x"
+				+ dm.heightPixels);
+		Log.d("LogoActivity", "displayMetrics.density:"
+				+ dm.density);
+		this.versionName = ((TextView) findViewById(2131363699));
+		this.tvPass = ((TextView) findViewById(2131363698));
+		this.tvPass.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View paramAnonymousView) {
+				Logo.this.timer.cancel();
+				Logo.this.go2NextPage();
+			}
+		});
+		this.tvVersion = ((TextView) findViewById(2131363696));
+		this.tvVersion.setText(AHConstant.VERSION + " for Android");
+		Log.d("TEST", "versionName" + this.versionName);
+		this.versionName.setText("版本" + AHConstant.VERSION);
+		this.img_startup = ((RemoteImageView) findViewById(2131363697));
+		this.ll_bottomLayout = ((RelativeLayout) findViewById(2131363694));
+		if ((dm.heightPixels > 1500) && (dm.density <= 2.0F)) {
+			((RelativeLayout.LayoutParams) this.ll_bottomLayout
+					.getLayoutParams()).height = (ScreenUtils.dpToPxInt(this,
+					100.0F) / 2 + ScreenUtils.dpToPxInt(this, 100.0F));
+			this.ll_bottomLayout.invalidate();
 		}
+		UserDb.getInstance().clearUserPwd();
+		this.timer = new MyCountDownTimer(5000L, 1000L);
+		this.timer.start();
+		
 	}
 	
 	private void initImageConfig(Context context) {
