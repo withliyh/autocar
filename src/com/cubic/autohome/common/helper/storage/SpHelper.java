@@ -345,683 +345,308 @@ public class SpHelper {
 	}
 
 
-.method public static getLocationProvinceName()String
-    .registers 2
-    .prologue
-00000000  const-string            v0, "location_province_name"
-00000004  const-string            v1, ""
-00000008  invoke-static           SpHelper->getString(String, String)String, v0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
+	public static String getLocationProvinceName() {
+		return getString("location_province_name", "");
+	}
 
-.method public static getLong(String, J)J
-    .registers 6
-    .param p0, "key"
-    .param p1, "defaultValue"
-    .prologue
-00000000  sget-object             v0, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->getLong(String, J)J, v0, p0, p1, p2
-0000000A  move-result-wide        v0
-0000000C  return-wide             v0
-.end method
 
-.method public static getMyCityId()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "my_city_id"
-00000004  const                   v1, 0x1AE14
-0000000A  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-00000010  move-result             v0
-00000012  return                  v0
-.end method
+	public static long getLong(String key, long defaultValue) {
+		return mySharedPreferences.getLong(key, defaultValue);
+	}
 
-.method public static getMyCityName()String
-    .registers 2
-    .prologue
-00000000  const-string            v0, "my_city_name"
-00000004  const-string            v1, "北京"
-00000008  invoke-static           SpHelper->getString(String, String)String, v0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
+	public static int getMyCityId() {
+		return getInt("my_city_id", 0x1AE14);
+	}
 
-.method public static getMyProvinceId()String
-    .registers 2
-    .prologue
-00000000  const-string            v0, "my_province_id"
-00000004  const-string            v1, ""
-00000008  invoke-static           SpHelper->getString(String, String)String, v0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
 
-.method public static getMyRealCityId()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "my_real_city_id"
-00000004  const                   v1, 0x1AE14
-0000000A  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-00000010  move-result             v0
-00000012  return                  v0
-.end method
+	public static String getMyCityName() {
+		return getString("my_city_name", "北京");
+	}
 
-.method public static getNewBulletinsLasttime()String
-    .registers 2
-    .prologue
-00000000  const-string            v0, "new_bulletins_lasttime"
-00000004  const-string            v1, "0"
-00000008  invoke-static           SpHelper->getString(String, String)String, v0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
+	public static String getMyProvinceId() {
+		return getString("my_province_id", "");
+	}
 
-.method public static getOldCompareCars()ArrayList
-    .registers 3
-    .annotation system Signature
-        value = {
-            "()",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/cubic/autohome/car/model/SpecEntity;",
-            ">;"
-        }
-    .end annotation
-    .prologue
-00000000  const-string            v1, "compare_cars"
-00000004  const/4                 v2, 0x0
-00000006  invoke-static           SpHelper->getString(String, String)String, v1, v2
-0000000C  move-result-object      v0
-    .local v0, config:Ljava/lang/String;
-0000000E  new-instance            v1, ArrayListAndStringUtil
-00000012  invoke-direct           ArrayListAndStringUtil-><init>()V, v1
-00000018  invoke-virtual          ArrayListAndStringUtil->StringToArrayList(String)ArrayList, v1, v0
-0000001E  move-result-object      v1
-00000020  return-object           v1
-.end method
 
-.method public static getPersuaderCssTag()J
-    .registers 4
-    .prologue
-00000000  const-string            v0, "persuaderCssTag"
-00000004  const-wide/16           v2, 0x0
-00000008  invoke-static           SpHelper->getLong(String, J)J, v0, v2, v3
-0000000E  move-result-wide        v0
-00000010  return-wide             v0
-.end method
+	public static int getMyRealCityId() {
+		return getInt("my_real_city_id", 0x1AE14);
+	}
 
-.method public static getPhoneAuth()Z
-    .registers 2
-    .prologue
-00000000  const-string            v0, "phone_auth"
-00000004  const/4                 v1, 0x0
-00000006  invoke-static           SpHelper->getBoolean(String, Z)Z, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
 
-.method public static getPhoneDensity()F
-    .registers 2
-    .prologue
-00000000  const-string            v0, "phone_density"
-00000004  const/high16            v1, 0x3F800000
-00000008  invoke-static           SpHelper->getFloat(String, F)F, v0, v1
-0000000E  move-result             v0
-00000010  return                  v0
-.end method
+	public static String getNewBulletinsLasttime() {
+		return getString("new_bulletins_lasttime", "0");
+	}
 
-.method public static getPriceCssTag()J
-    .registers 4
-    .prologue
-00000000  const-string            v0, "priceCssTag"
-00000004  const-wide/16           v2, 0x0
-00000008  invoke-static           SpHelper->getLong(String, J)J, v0, v2, v3
-0000000E  move-result-wide        v0
-00000010  return-wide             v0
-.end method
+	public static ArrayList<SpecEntity> getOldCompareCars() {
+		String config = getString("compare_cars", null);
+		ArrayListAndStringUtil util = new ArrayListAndStringUtil();
+		return util.StringToArrayList(config);
+	}
 
-.method public static getRightCompareCarID()String
-    .registers 2
-    .prologue
-00000000  const-string            v0, "right_compare_carID"
-00000004  const-string            v1, "0"
-00000008  invoke-static           SpHelper->getString(String, String)String, v0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
 
-.method public static getSaveOverViewClickNew(I)I
-    .registers 3
-    .param p0, "typeid"
-    .prologue
-00000000  new-instance            v0, StringBuilder
-00000004  invoke-static           String->valueOf(I)String, p0
-0000000A  move-result-object      v1
-0000000C  invoke-direct           StringBuilder-><init>(String)V, v0, v1
-00000012  invoke-virtual          StringBuilder->toString()String, v0
-00000018  move-result-object      v0
-0000001A  const/4                 v1, 0xFFFFFFFFFFFFFFFF
-0000001C  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-00000022  move-result             v0
-00000024  return                  v0
-.end method
+	public static long getPersuaderCssTag() {
+		return getLong("persuaderCssTag" 0);
+	}
 
-.method public static getSaveSaleClickNew(I)I
-    .registers 3
-    .param p0, "seriesId"
-    .prologue
-00000000  new-instance            v0, StringBuilder
-00000004  invoke-static           String->valueOf(I)String, p0
-0000000A  move-result-object      v1
-0000000C  invoke-direct           StringBuilder-><init>(String)V, v0, v1
-00000012  invoke-virtual          StringBuilder->toString()String, v0
-00000018  move-result-object      v0
-0000001A  const/4                 v1, 0xFFFFFFFFFFFFFFFF
-0000001C  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-00000022  move-result             v0
-00000024  return                  v0
-.end method
 
-.method public static getScreenHeight()I
-    .registers 1
-    .prologue
-00000000  const-string            v0, "screen_height"
-00000004  invoke-static           SpHelper->getInt(String)I, v0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static boolean getPhoneAuth() {
+		return getBoolean("phone_auth", false);
+	}
 
-.method public static getScreenWidth()I
-    .registers 1
-    .prologue
-00000000  const-string            v0, "screen_width"
-00000004  invoke-static           SpHelper->getInt(String)I, v0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-.method public static getScreenWidthForPage()I
-    .registers 1
-    .prologue
-00000000  const-string            v0, "screen_width_page"
-00000004  invoke-static           SpHelper->getInt(String)I, v0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static float getPhoneDensity() {
+		return getFloat("phone_density", 0x3F800000);
+	}
 
-.method public static getSearchHistory()String
-    .registers 3
-    .prologue
-00000000  sget-object             v0, SpHelper->mSearchHistory:SharedPreferences
-00000004  const-string            v1, "search_log_key"
-00000008  const-string            v2, ""
-0000000C  invoke-interface        SharedPreferences->getString(String, String)String, v0, v1, v2
-00000012  move-result-object      v0
-00000014  return-object           v0
-.end method
 
-.method public static getSeriesArticlePosition()I
-    .registers 3
-    .prologue
-00000000  sget-object             v0, SpHelper->mySharedPreferences:SharedPreferences
-00000004  const-string            v1, "seriesarticleposition"
-00000008  const/4                 v2, 0x0
-0000000A  invoke-interface        SharedPreferences->getInt(String, I)I, v0, v1, v2
-00000010  move-result             v0
-00000012  return                  v0
-.end method
+	public static long getPriceCssTag() {
+		return getLong("priceCssTag", 0);
+	}
 
-.method public static getSlipSwitch()Z
-    .registers 2
-    .prologue
-00000000  const-string            v0, "slip_switch"
-00000004  const/4                 v1, 0x0
-00000006  invoke-static           SpHelper->getBoolean(String, Z)Z, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
 
-.method public static getSpMode()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "spmode"
-00000004  const/4                 v1, 0x0
-00000006  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
+	public static String getRightCompareCarID() {
+		return getString("right_compare_carID", "0");
+	}
 
-.method public static getString(String)String
-    .registers 3
-    .param p0, "key"
-    .prologue
-00000000  sget-object             v0, SpHelper->mySharedPreferences:SharedPreferences
-00000004  const-string            v1, ""
-00000008  invoke-interface        SharedPreferences->getString(String, String)String, v0, p0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
 
-.method public static getString(String, String)String
-    .registers 3
-    .param p0, "key"
-    .param p1, "defaultValue"
-    .prologue
-00000000  sget-object             v0, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->getString(String, String)String, v0, p0, p1
-0000000A  move-result-object      v0
-0000000C  return-object           v0
-.end method
+	public static int getSaveOverViewClickNew(int typeid) {
+		return getInt(String.valueOf(typeid), -1);
+	}
 
-.method public static getThemePackageName()String
-    .registers 3
-    .prologue
-00000000  sget-object             v0, SpHelper->mSkinConfig:SharedPreferences
-00000004  const-string            v1, "themePackage"
-00000008  const-string            v2, ""
-0000000C  invoke-interface        SharedPreferences->getString(String, String)String, v0, v1, v2
-00000012  move-result-object      v0
-00000014  return-object           v0
-.end method
 
-.method public static getVideoCssTag()J
-    .registers 4
-    .prologue
-00000000  const-string            v0, "videoCssTag"
-00000004  const-wide/16           v2, 0x0
-00000008  invoke-static           SpHelper->getLong(String, J)J, v0, v2, v3
-0000000E  move-result-wide        v0
-00000010  return-wide             v0
-.end method
+	public static int getSaveSaleClickNew(int seriesId) {
+		return getInt(String.valueOf(seriesId), -1);
+	}
 
-.method public static getVideoDisabledTips()String
-    .registers 2
-    .prologue
-00000000  const-string            v0, "video_disabled_tips"
-00000004  const-string            v1, ""
-00000008  invoke-static           SpHelper->getString(String, String)String, v0, v1
-0000000E  move-result-object      v0
-00000010  return-object           v0
-.end method
 
-.method public static getVideoEnabled()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "video_enabled"
-00000004  const/4                 v1, 0x1
-00000006  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
+	public static int getScreenHeight() {
+		return getInt("screen_height");
+	}
 
-.method public static getVideoHeight()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "video_height"
-00000004  const/16                v1, 0x168
-00000008  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-0000000E  move-result             v0
-00000010  return                  v0
-.end method
 
-.method public static getVideoMaxTime()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "video_max_time"
-00000004  const/16                v1, 0x1E
-00000008  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-0000000E  move-result             v0
-00000010  return                  v0
-.end method
+	public static int getScreenWidth() {
+		return getInt("screen_width");
+	}
+	
+	
+	public static int getScreenWidthForPage() {
+		return getInt("screen_width_page");
+	}
 
-.method public static getVideoRate()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "video_rate"
-00000004  const/4                 v1, 0x2
-00000006  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
 
-.method public static getVideoWidth()I
-    .registers 2
-    .prologue
-00000000  const-string            v0, "video_width"
-00000004  const/16                v1, 0x1E0
-00000008  invoke-static           SpHelper->getInt(String, I)I, v0, v1
-0000000E  move-result             v0
-00000010  return                  v0
-.end method
+	public static String getSearchHistory() {
+		return mSearchHistory.getString("search_log_key", "");
+	}
 
-.method public static hasNewBulletins()Z
-    .registers 2
-    .prologue
-00000000  const-string            v0, "has_new_bulletins"
-00000004  const/4                 v1, 0x1
-00000006  invoke-static           SpHelper->getBoolean(String, Z)Z, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
 
-.method public static increaseDraftCount()V
-    .registers 3
-    .prologue
-00000000  const-string            v1, "draft_count"
-00000004  const/4                 v2, 0x0
-00000006  invoke-static           SpHelper->getInt(String, I)I, v1, v2
-0000000C  move-result             v0
-    .local v0, total:I
-0000000E  if-lez                  v0, :22
-:12
-00000012  const-string            v1, "draft_count"
-00000016  add-int/lit8            v2, v0, 0x1
-0000001A  invoke-static           SpHelper->commitInt(String, I)Z, v1, v2
-:20
-00000020  return-void
-:22
-00000022  const-string            v1, "draft_count"
-00000026  const/4                 v2, 0x1
-00000028  invoke-static           SpHelper->commitInt(String, I)Z, v1, v2
-0000002E  goto                    :20
-.end method
+	public static int getSeriesArticlePosition() {
+		return mySharedPreferences.getInt("seriesarticleposition", 0);
+	}
 
-.method public static isShowGuideForFM()Z
-    .registers 2
-00000000  const/4                 v0, 0x0
-    .prologue
-00000002  const-string            v1, "guide_page_for_fm"
-00000006  invoke-static           SpHelper->getInt(String, I)I, v1, v0
-0000000C  move-result             v1
-0000000E  if-nez                  v1, :14
-:12
-00000012  const/4                 v0, 0x1
-:14
-00000014  return                  v0
-.end method
 
-.method public static isShowGuideForMain2()Z
-    .registers 2
-00000000  const/4                 v0, 0x0
-    .prologue
-00000002  const-string            v1, "guide_page_for_main_2"
-00000006  invoke-static           SpHelper->getInt(String, I)I, v1, v0
-0000000C  move-result             v1
-0000000E  if-nez                  v1, :14
-:12
-00000012  const/4                 v0, 0x1
-:14
-00000014  return                  v0
-.end method
+	public static boolean getSlipSwitch() {
+		return getBoolean("slip_switch", false);
+	}
 
-.method public static isShowGuideForSale()Z
-    .registers 2
-00000000  const/4                 v0, 0x0
-    .prologue
-00000002  const-string            v1, "guide_page_for_sale"
-00000006  invoke-static           SpHelper->getInt(String, I)I, v1, v0
-0000000C  move-result             v1
-0000000E  if-nez                  v1, :14
-:12
-00000012  const/4                 v0, 0x1
-:14
-00000014  return                  v0
-.end method
 
-.method public static isShowGuideForSeriesDealer()Z
-    .registers 2
-00000000  const/4                 v0, 0x0
-    .prologue
-00000002  const-string            v1, "guide_page_for_series_dealer"
-00000006  invoke-static           SpHelper->getInt(String, I)I, v1, v0
-0000000C  move-result             v1
-0000000E  if-nez                  v1, :14
-:12
-00000012  const/4                 v0, 0x1
-:14
-00000014  return                  v0
-.end method
+	public static int getSpMode() {
+		return getInt("spmode", 0);
+	}
 
-.method public static isShowMoreRedDot()Z
-    .registers 2
-    .prologue
-00000000  const-string            v0, "more_red_dot"
-00000004  const/4                 v1, 0x0
-00000006  invoke-static           SpHelper->getBoolean(String, Z)Z, v0, v1
-0000000C  move-result             v0
-0000000E  return                  v0
-.end method
 
-.method public static reduceDraftCount()V
-    .registers 3
-00000000  const/4                 v2, 0x0
-    .prologue
-00000002  const-string            v1, "draft_count"
-00000006  invoke-static           SpHelper->getInt(String, I)I, v1, v2
-0000000C  move-result             v0
-    .local v0, total:I
-0000000E  if-lez                  v0, :22
-:12
-00000012  const-string            v1, "draft_count"
-00000016  add-int/lit8            v2, v0, 0xFFFFFFFFFFFFFFFF
-0000001A  invoke-static           SpHelper->commitInt(String, I)Z, v1, v2
-:20
-00000020  return-void
-:22
-00000022  const-string            v1, "draft_count"
-00000026  invoke-static           SpHelper->commitInt(String, I)Z, v1, v2
-0000002C  goto                    :20
-.end method
+	public static String getString(String key) {
+		return mySharedPreferences.getString(key, "");
+	}
 
-.method public static registerPrefChangeListener(SharedPreferences$OnSharedPreferenceChangeListener)V
-    .registers 2
-    .param p0, "listener"
-    .prologue
-00000000  sget-object             v0, SpHelper->mSkinConfig:SharedPreferences
-00000004  invoke-interface        SharedPreferences->registerOnSharedPreferenceChangeListener(SharedPreferences$OnSharedPreferenceChangeListener)V, v0, p0
-0000000A  return-void
-.end method
 
-.method public static remove(String)Z
-    .registers 2
-    .param p0, "key"
-    .prologue
-00000000  sget-object             v0, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v0
-0000000A  move-result-object      v0
-0000000C  invoke-interface        SharedPreferences$Editor->remove(String)SharedPreferences$Editor, v0, p0
-00000012  move-result-object      v0
-00000014  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001A  move-result             v0
-0000001C  return                  v0
-.end method
+	public static String getString(String key , String defaultValue) {
+		return mySharedPreferences.getString(key, defaultValue);
+	}
 
-.method public static saveAppRecommand(ArrayList)Z
-    .registers 3
-    .annotation system Signature
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/cubic/autohome/business/user/owner/bean/AppRecommandEntity;",
-            ">;)Z"
-        }
-    .end annotation
-    .param p0, ""
-    .prologue
-    .local v2, appRecommand:Ljava/util/ArrayList;
-00000000  new-instance            v1, ArrayListAndStringUtil
-00000004  invoke-direct           ArrayListAndStringUtil-><init>()V, v1
-0000000A  invoke-virtual          ArrayListAndStringUtil->ArrayListToString(ArrayList)String, v1, p0
-00000010  move-result-object      v0
-    .local v0, recommand:Ljava/lang/String;
-00000012  const-string            v1, "apprecommand"
-00000016  invoke-static           SpHelper->commitString(String, String)Z, v1, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-.method public static saveAskPriceUserNameAndPhone(ArrayList)Z
-    .registers 3
-    .annotation system Signature
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Ljava/lang/String;",
-            ">;)Z"
-        }
-    .end annotation
-    .param p0, ""
-    .prologue
-    .local v2, userInfo:Ljava/util/ArrayList;
-00000000  new-instance            v1, ArrayListAndStringUtil
-00000004  invoke-direct           ArrayListAndStringUtil-><init>()V, v1
-0000000A  invoke-virtual          ArrayListAndStringUtil->ArrayListToString(ArrayList)String, v1, p0
-00000010  move-result-object      v0
-    .local v0, config:Ljava/lang/String;
-00000012  const-string            v1, "user_info"
-00000016  invoke-static           SpHelper->commitString(String, String)Z, v1, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
+	public static String getThemePackageName() {
+		return mSkinConfig.getString("themePackage", "");
+	}
 
-.method public static saveClubReplyRefresh(Z)Z
-    .registers 2
-    .param p0, "isRefresh"
-    .prologue
-00000000  const-string            v0, "club_reply_refresh"
-00000004  invoke-static           SpHelper->commitBoolean(String, Z)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-.method public static saveCommentReplyRefresh(Z)Z
-    .registers 2
-    .param p0, "isRefresh"
-    .prologue
-00000000  const-string            v0, "comment_reply_refresh"
-00000004  invoke-static           SpHelper->commitBoolean(String, Z)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static long getVideoCssTag() {
+		return getLong("videoCssTag", 0);
+	}
 
-.method public static saveCompareCars(ArrayList)Z
-    .registers 3
-    .annotation system Signature
-        value = {
-            "(",
-            "Ljava/util/ArrayList",
-            "<",
-            "Lcom/cubic/autohome/business/car/bean/SpecEntity;",
-            ">;)Z"
-        }
-    .end annotation
-    .param p0, ""
-    .prologue
-    .local v2, compareCars:Ljava/util/ArrayList;
-00000000  new-instance            v1, ArrayListAndStringUtil
-00000004  invoke-direct           ArrayListAndStringUtil-><init>()V, v1
-0000000A  invoke-virtual          ArrayListAndStringUtil->ArrayListToString(ArrayList)String, v1, p0
-00000010  move-result-object      v0
-    .local v0, config:Ljava/lang/String;
-00000012  const-string            v1, "compare_cars"
-00000016  invoke-static           SpHelper->commitString(String, String)Z, v1, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-.method public static saveLeftCompareCarId(String)Z
-    .registers 2
-    .param p0, "leftCarId"
-    .prologue
-00000000  const-string            v0, "left_compare_carID"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static String getVideoDisabledTips() {
+		return getString("video_disabled_tips", "");
+	}
 
-.method public static saveLocalLa(D)Z
-    .registers 4
-    .param p0, "la"
-    .prologue
-00000000  const-string            v0, "local_la"
-00000004  invoke-static           SpHelper->commitDouble(String, D)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-.method public static saveLocalLo(D)Z
-    .registers 4
-    .param p0, "lo"
-    .prologue
-00000000  const-string            v0, "local_lo"
-00000004  invoke-static           SpHelper->commitDouble(String, D)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static int getVideoEnabled() {
+		return getInt("video_enabled", 1);
+	}
 
-.method public static saveLocationCityId(I)Z
-    .registers 2
-    .param p0, "locationCityId"
-    .prologue
-00000000  const-string            v0, "location_city_id"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-.method public static saveLocationCityName(String)Z
-    .registers 2
-    .param p0, "locationCityName"
-    .prologue
-00000000  const-string            v0, "location_city_name"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static int getVideoHeight() {
+		return getInt("video_height", 0x168);
+	}
 
-.method public static saveLocationProvinceId(I)Z
-    .registers 2
-    .param p0, "locationProvinceId"
-    .prologue
-00000000  const-string            v0, "location_province_id"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-.method public static saveLocationProvinceName(String)Z
-    .registers 2
-    .param p0, "locationProvinceName"
-    .prologue
-00000000  const-string            v0, "location_province_name"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static int getVideoMaxTime() {
+		return getInt("video_max_time", 0x1e);
+	}
+	
+	
+	public static int getVideoRate() {
+		return getInt("video_rate", 0x2);
+	}
+	
+	
+	public static int getVideoWidth() {
+		return getInt("video_width", 0x1E0);
+	}
+	
+	public static boolean hasNewBulletins() {
+		return getBoolean("has_new_bulletins", true);
+	}
 
-.method public static saveMyCityId(I)Z
-    .registers 2
-    .param p0, "myCityId"
-    .prologue
-00000000  const-string            v0, "my_city_id"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static void increaseDraftCount() {
+		int total = getInt("draft_count", 0);
+		if (total < 0) {
+			total = 0;
+		}
+		commitInt("draft_count", total+1);
+	}
 
-.method public static saveMyCityName(String)Z
-    .registers 2
-    .param p0, "myCityName"
-    .prologue
-00000000  const-string            v0, "my_city_name"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-.method public static saveMyRealCityId(I)Z
+	public static boolean isShowGuideForFM() {
+		int is = getInt("guide_page_for_fm", 0);
+		if (is != 0) {
+			return false;
+		}
+		return true;
+	}
+	
+	
+	public static boolean isShowGuideForMain2() {
+		int is = getInt("guide_page_for_main_2", 0);
+		if (is != 0) {
+			return false;
+		}
+		return true;
+	}
+
+
+	public static boolean isShowGuideForSale() {
+		return getInt("guide_page_for_sale", 0);
+	}
+	
+	
+	public static boolean isShowGuideForSeriesDealer() {
+		int is = getInt("guide_page_for_series_dealer", 0);
+		if (is != 0) {
+			return false;
+		}
+		return true;
+	}
+
+
+	public static boolean isShowMoreRedDot() {
+		return getBoolean("more_red_dot", false);
+	}
+	
+	
+	public static void reduceDraftCount() {
+		int total =  getInt("draft_count", 0);
+		if (total > 0 ) {
+			total --;
+		}
+		commitInt("draft_count", total);
+	}
+	
+	
+	public static void registerPrefChangeListener(SharedPreferences.OnSharedPreferenceChangeListener listener) {
+		mSkinConfig.registerOnSharedPreferenceChangeListener(listener);
+	}
+
+
+	public static boolean remove(String key) {
+		return mySharedPreferences.edit().remove(key).commit();
+	}
+
+
+	public static boolean saveAppRecommand(ArrayList<AppRecommandEntity> apprecommand) {
+		ArrayListAndStringUtil util = new ArrayListAndStringUtil();
+		String recommand = util.ArrayListToString(apprecommand);
+		return commitString("apprecommand", recommand);
+	}
+	
+	
+	public static boolean saveAskPriceUserNameAndPhone(ArrayList<String> userInfo) {
+		ArrayListAndStringUtil util = new ArrayListAndStringUtil();
+		String config = util.ArrayListToString(userInfo);
+		return commitString("user_info", config);
+	}
+	
+	
+	public static boolean saveClubReplyRefresh(boolean isRefresh) {
+		return commitBoolean("club_reply_refresh", isRefresh);
+	}
+	
+	
+	public static boolean saveCommentReplyRefresh(boolean isRefresh) {
+		return commitBoolean("comment_reply_refresh", isRefresh);
+	}
+
+
+	public static boolean saveCompareCars(ArrayList<SpecEntity> compareCars) {
+		ArrayListAndStringUtil util = new ArrayListAndStringUtil();
+		String config = util.ArrayListToString(compareCars);
+		return commitString("compare_cars", config);
+	}
+	
+	
+	public static boolean saveLeftCompareCarId(String leftCarId) {
+		return commitString("left_compare_carID", leftCarId);
+	}
+	
+	
+	public static boolean  saveLocalLa(double local_la) {
+		return commitDouble("local_la", local_la);
+	}
+	
+	public static boolean  saveLocalLo(double local_lo) {
+		return commitDouble("local_lo", local_lo);
+	}
+
+
+	public static boolean saveLocationCityId(int locationCityId) {
+		return commitInt("location_city_id", locationCityId);
+	}
+	
+	
+	public static boolean saveLocationCityName(String locationCityName) {
+		return commitString("location_city_name", locationCityName);
+	}
+
+	public static boolean saveLocationProvinceId(int locationProvinceId) {
+		return commitInt("location_province_id", locationProvinceId);
+	}
+
+
+	public static boolean saveLocationProvinceName(String locationProvinceName) {
+		return commitString("location_province_name", locationProvinceName);
+	}
+	
+	
+	public static boolean saveMyCityId(int myCityId) {
+		return commitInt("my_city_id", myCityId);
+	}
+	
+	
+	public static boolean saveMyCityName(String myCityName) {
+		return commitString("my_city_name", myCityName);
+	}
+
+
+public static saveMyRealCityId(I)Z
     .registers 2
     .param p0, "myCityId"
     .prologue
@@ -1031,7 +656,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static saveMyTopicRefresh(Z)Z
+public static saveMyTopicRefresh(Z)Z
     .registers 2
     .param p0, "isRefresh"
     .prologue
@@ -1041,7 +666,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static saveOverViewClickNew(I)Z
+public static saveOverViewClickNew(I)Z
     .registers 4
     .param p0, "typeid"
     .prologue
@@ -1062,7 +687,7 @@ public class SpHelper {
 00000036  return                  v1
 .end method
 
-.method public static savePhoneDensity(F)Z
+public static savePhoneDensity(F)Z
     .registers 2
     .param p0, "phoneDensity"
     .prologue
@@ -1072,7 +697,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static saveRightCompareCarId(String)Z
+public static saveRightCompareCarId(String)Z
     .registers 2
     .param p0, "rightCarId"
     .prologue
@@ -1082,7 +707,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static saveScreenHeight(I)Z
+public static saveScreenHeight(I)Z
     .registers 2
     .param p0, "screenHeight"
     .prologue
@@ -1092,7 +717,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static saveScreenWidth(I)Z
+public static saveScreenWidth(I)Z
     .registers 2
     .param p0, "screenWidth"
     .prologue
@@ -1102,7 +727,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static saveScreenWidthForPage(I)Z
+public static saveScreenWidthForPage(I)Z
     .registers 2
     .param p0, "screenWidthForPage"
     .prologue
@@ -1112,7 +737,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setAppsUploadState(Z)Z
+public static setAppsUploadState(Z)Z
     .registers 3
     .param p0, "state"
     .prologue
@@ -1127,7 +752,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setArticleCssTag(J)Z
+public static setArticleCssTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1137,7 +762,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setAutohomeVersionCode(I)Z
+public static setAutohomeVersionCode(I)Z
     .registers 2
     .param p0, "versionCode"
     .prologue
@@ -1147,7 +772,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setChannel(String)Z
+public static setChannel(String)Z
     .registers 3
     .param p0, "value"
     .prologue
@@ -1162,7 +787,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setClubRecappCloset(J)Z
+public static setClubRecappCloset(J)Z
     .registers 4
     .param p0, "value"
     .prologue
@@ -1177,7 +802,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setClubUserShow(String)Z
+public static setClubUserShow(String)Z
     .registers 2
     .param p0, "clubUserShow"
     .prologue
@@ -1187,7 +812,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setCommonJsTag(J)Z
+public static setCommonJsTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1197,7 +822,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setDevDebugMode(Z, Context)V
+public static setDevDebugMode(Z, Context)V
     .registers 6
     .param p0, "isDebug"
     .param p1, "context"
@@ -1216,7 +841,7 @@ public class SpHelper {
 00000026  return-void
 .end method
 
-.method private static setFontSize(WebView, I)V
+private static setFontSize(WebView, I)V
     .registers 5
     .param p0, "webview"
     .param p1, "fs"
@@ -1260,7 +885,7 @@ public class SpHelper {
     .end packed-switch
 .end method
 
-.method public static setFontSize(I)Z
+public static setFontSize(I)Z
     .registers 2
     .param p0, "fontSize"
     .prologue
@@ -1270,7 +895,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setGuidePage(I)Z
+public static setGuidePage(I)Z
     .registers 2
     .param p0, "mode"
     .prologue
@@ -1280,7 +905,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setInstalledSkinVersion(I)Z
+public static setInstalledSkinVersion(I)Z
     .registers 3
     .param p0, "version"
     .prologue
@@ -1295,7 +920,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setIsSwitchedFlag(Z)Z
+public static setIsSwitchedFlag(Z)Z
     .registers 3
     .param p0, "value"
     .prologue
@@ -1310,7 +935,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setIsSwitchedLocationFlag(Z)Z
+public static setIsSwitchedLocationFlag(Z)Z
     .registers 3
     .param p0, "value"
     .prologue
@@ -1325,7 +950,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setJqueryJsTag(J)Z
+public static setJqueryJsTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1335,7 +960,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setJquerynewJsTag(J)Z
+public static setJquerynewJsTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1345,7 +970,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setLoadvideoJsTag(J)Z
+public static setLoadvideoJsTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1355,7 +980,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setLocalDeviceID(String)Z
+public static setLocalDeviceID(String)Z
     .registers 3
     .param p0, "deviceID"
     .prologue
@@ -1370,7 +995,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setMyProvinceId(String)Z
+public static setMyProvinceId(String)Z
     .registers 2
     .param p0, "myProvinceId"
     .prologue
@@ -1380,7 +1005,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setNewBulletinsLasttime(String)V
+public static setNewBulletinsLasttime(String)V
     .registers 4
     .param p0, "lasttime"
     .prologue
@@ -1404,7 +1029,7 @@ public class SpHelper {
     .catch NumberFormatException {:0 .. :26} :28
 .end method
 
-.method public static setPersuaderCssTag(J)Z
+public static setPersuaderCssTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1414,7 +1039,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setPhoneAuth(Z)Z
+public static setPhoneAuth(Z)Z
     .registers 2
     .param p0, "isPhoneAuth"
     .prologue
@@ -1424,7 +1049,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setPriceCssTag(J)Z
+public static setPriceCssTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1434,7 +1059,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setSearchHistory(String)Z
+public static setSearchHistory(String)Z
     .registers 3
     .param p0, "value"
     .prologue
@@ -1449,7 +1074,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setSeriesArticlePosition(I)Z
+public static setSeriesArticlePosition(I)Z
     .registers 3
     .param p0, "seriesArticlePosition"
     .prologue
@@ -1464,7 +1089,7 @@ public class SpHelper {
 0000001E  return                  v1
 .end method
 
-.method public static setShowGuideForFM(I)V
+public static setShowGuideForFM(I)V
     .registers 2
     .param p0, "versionCode"
     .prologue
@@ -1473,7 +1098,7 @@ public class SpHelper {
 0000000A  return-void
 .end method
 
-.method public static setShowGuideForMain2(I)V
+public static setShowGuideForMain2(I)V
     .registers 2
     .param p0, "versionCode"
     .prologue
@@ -1482,7 +1107,7 @@ public class SpHelper {
 0000000A  return-void
 .end method
 
-.method public static setShowGuideForSale(I)V
+public static setShowGuideForSale(I)V
     .registers 2
     .param p0, "versionCode"
     .prologue
@@ -1491,7 +1116,7 @@ public class SpHelper {
 0000000A  return-void
 .end method
 
-.method public static setShowGuideForSeriesDealer(I)V
+public static setShowGuideForSeriesDealer(I)V
     .registers 2
     .param p0, "versionCode"
     .prologue
@@ -1500,7 +1125,7 @@ public class SpHelper {
 0000000A  return-void
 .end method
 
-.method public static setSpMode(I)Z
+public static setSpMode(I)Z
     .registers 2
     .param p0, "mode"
     .prologue
@@ -1510,7 +1135,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setThemePackageName(String)V
+public static setThemePackageName(String)V
     .registers 3
     .param p0, "packageName"
     .prologue
@@ -1524,7 +1149,7 @@ public class SpHelper {
 0000001E  return-void
 .end method
 
-.method public static setVideoCssTag(J)Z
+public static setVideoCssTag(J)Z
     .registers 4
     .param p0, "changeTag"
     .prologue
@@ -1534,7 +1159,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setVideoDisabledTips(String)Z
+public static setVideoDisabledTips(String)Z
     .registers 2
     .param p0, "disabledTips"
     .prologue
@@ -1544,7 +1169,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setVideoEnabled(I)Z
+public static setVideoEnabled(I)Z
     .registers 2
     .param p0, "enabledFlag"
     .prologue
@@ -1554,7 +1179,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setVideoHeight(I)Z
+public static setVideoHeight(I)Z
     .registers 2
     .param p0, "height"
     .prologue
@@ -1564,7 +1189,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setVideoMaxTime(I)Z
+public static setVideoMaxTime(I)Z
     .registers 2
     .param p0, "time"
     .prologue
@@ -1574,7 +1199,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setVideoRate(I)Z
+public static setVideoRate(I)Z
     .registers 2
     .param p0, "rate"
     .prologue
@@ -1584,7 +1209,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static setVideoWidth(I)Z
+public static setVideoWidth(I)Z
     .registers 2
     .param p0, "width"
     .prologue
@@ -1594,7 +1219,7 @@ public class SpHelper {
 0000000C  return                  v0
 .end method
 
-.method public static sethasNewBulletins(Z)Z
+public static sethasNewBulletins(Z)Z
     .registers 2
     .param p0, "hasNewBulletins"
     .prologue
