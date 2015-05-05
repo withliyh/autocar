@@ -7,6 +7,7 @@ import com.cubic.autohome.business.user.owner.bean.AppRecommandEntity;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.webkit.WebView;
 
 public class SpHelper {
 	private static final String APPRECOMMAND = "apprecommand";
@@ -189,8 +190,9 @@ public class SpHelper {
 	}
 	
 	public static ArrayList<AppRecommandEntity> getAppRecommand() {
-		String recommand = getString("apprecommand", 0);
-		return new ArrayListAndStringUtil.StringToArrayList(recommand);
+		String recommand = getString("apprecommand", null);
+		ArrayListAndStringUtil util =  new ArrayListAndStringUtil();
+		return util.StringToArrayList(recommand);
 	}
 	
 	public static boolean getAppsUploadState() {
@@ -203,7 +205,8 @@ public class SpHelper {
 	
 	public static ArrayList<String> getAskPriceUserNameAndPhone() {
 		String config = getString("user_info", null);
-		return new ArrayListAndStringUtil.StringToArrayList(config);
+		ArrayListAndStringUtil util =  new ArrayListAndStringUtil();
+		return util.StringToArrayList(config);
 	}
 	
 	public static int getAutohomeVersionCode() {
@@ -236,7 +239,8 @@ public class SpHelper {
 	
 	public static ArrayList<SpecEntity> getCompareCars() {
 		String config = getString("compare_cars", null);
-		return new ArrayListAndStringUtil.StringToArrayList(config);
+		ArrayListAndStringUtil util =  new ArrayListAndStringUtil();
+		return util.StringToArrayList(config);
 	}
 	
 	public static boolean getDevDebugMode(Context context) {
@@ -385,7 +389,7 @@ public class SpHelper {
 
 
 	public static long getPersuaderCssTag() {
-		return getLong("persuaderCssTag" 0);
+		return getLong("persuaderCssTag", 0);
 	}
 
 
@@ -535,7 +539,7 @@ public class SpHelper {
 
 
 	public static boolean isShowGuideForSale() {
-		return getInt("guide_page_for_sale", 0);
+		return getBoolean("guide_page_for_sale", false);
 	}
 	
 	
@@ -646,588 +650,257 @@ public class SpHelper {
 	}
 
 
-public static saveMyRealCityId(I)Z
-    .registers 2
-    .param p0, "myCityId"
-    .prologue
-00000000  const-string            v0, "my_real_city_id"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static boolean saveMyRealCityId(int myCityId) {
+		return commitInt("my_real_city_id", myCityId);
+	}
+	
+	
+	public static boolean saveMyTopicRefresh(boolean isRefresh) {
+		return commitBoolean("mytopic_refresh", isRefresh);
+	}
 
-public static saveMyTopicRefresh(Z)Z
-    .registers 2
-    .param p0, "isRefresh"
-    .prologue
-00000000  const-string            v0, "mytopic_refresh"
-00000004  invoke-static           SpHelper->commitBoolean(String, Z)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static saveOverViewClickNew(I)Z
-    .registers 4
-    .param p0, "typeid"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  new-instance            v1, StringBuilder
-00000010  invoke-static           String->valueOf(I)String, p0
-00000016  move-result-object      v2
-00000018  invoke-direct           StringBuilder-><init>(String)V, v1, v2
-0000001E  invoke-virtual          StringBuilder->toString()String, v1
-00000024  move-result-object      v1
-00000026  const/4                 v2, 0x1
-00000028  invoke-interface        SharedPreferences$Editor->putInt(String, I)SharedPreferences$Editor, v0, v1, v2
-0000002E  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-00000034  move-result             v1
-00000036  return                  v1
-.end method
+	public static boolean saveOverViewClickNew(int typeid) {
+		return mySharedPreferences.edit().putInt(String.valueOf(typeid), 0x1).commit();
+	}
+	
+	
+	public static boolean savePhoneDensity(float phoneDensity) {
+		return commitFloat("phone_density" , phoneDensity);
+	}
 
-public static savePhoneDensity(F)Z
-    .registers 2
-    .param p0, "phoneDensity"
-    .prologue
-00000000  const-string            v0, "phone_density"
-00000004  invoke-static           SpHelper->commitFloat(String, F)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static saveRightCompareCarId(String)Z
-    .registers 2
-    .param p0, "rightCarId"
-    .prologue
-00000000  const-string            v0, "right_compare_carID"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static boolean saveRightCompareCarId(String rightCarId) {
+		return commitString("right_compare_carID", rightCarId);
+	}
+	
+	
+	public static boolean saveScreenHeight(int screenHeight) {
+		return commitInt("screen_height", screenHeight);
+	}
+	
+	
+	public static boolean saveScreenWidth(int screenWidth) {
+		return commitInt("screen_width", screenWidth);
+	}
+	
+	
+	public static boolean saveScreenWidthForPage(int screenWidthForPage) {
+		return commitInt("screen_width_page", screenWidthForPage);
+	}
+	
+	
+	public static boolean setAppsUploadState(boolean state) {
+		return mySharedPreferences.edit().putBoolean("apps_upload_state", state).commit();
+	}
 
-public static saveScreenHeight(I)Z
-    .registers 2
-    .param p0, "screenHeight"
-    .prologue
-00000000  const-string            v0, "screen_height"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static saveScreenWidth(I)Z
-    .registers 2
-    .param p0, "screenWidth"
-    .prologue
-00000000  const-string            v0, "screen_width"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static boolean setArticleCssTag(long changeTag) {
+		return commitLong("articleCssTag", changeTag);
+	}
+	
+	
+	public static boolean setAutohomeVersionCode(int versionCode) {
+		return commitInt("versionCode", versionCode);
+	}
 
-public static saveScreenWidthForPage(I)Z
-    .registers 2
-    .param p0, "screenWidthForPage"
-    .prologue
-00000000  const-string            v0, "screen_width_page"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setAppsUploadState(Z)Z
-    .registers 3
-    .param p0, "state"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "apps_upload_state"
-00000010  invoke-interface        SharedPreferences$Editor->putBoolean(String, Z)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
+	public static boolean setChannel(String value) {
+		return mySharedPreferences.edit().putString("local_channel", value).commit();
+	}
+	
+	
+	public static boolean setClubRecappCloset(long value) {
+		return mySharedPreferences.edit().putLong("clubrecommentappcloset", value).commit();
+	}
+	
+	
+	public static boolean setClubUserShow(String clubUserShow) {
+		return commitString("clubUserShow", clubUserShow);
+	}
 
-public static setArticleCssTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "articleCssTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setAutohomeVersionCode(I)Z
-    .registers 2
-    .param p0, "versionCode"
-    .prologue
-00000000  const-string            v0, "versionCode"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static boolean setCommonJsTag(long changeTag) {
+		return commitLong("commonJsTag", changeTag);
+	}
+	
+	
+	public static void setDevDebugMode(boolean isDebug, Context context) {
+		SharedPreferences sp = context.getSharedPreferences(NAME_DEBUG_MODE, 0);
+		sp.edit().putBoolean(KEY_DEBUG_MODE, isDebug).commit();
+	}
 
-public static setChannel(String)Z
-    .registers 3
-    .param p0, "value"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "local_channel"
-00000010  invoke-interface        SharedPreferences$Editor->putString(String, String)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-public static setClubRecappCloset(J)Z
-    .registers 4
-    .param p0, "value"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "clubrecommentappcloset"
-00000010  invoke-interface        SharedPreferences$Editor->putLong(String, J)SharedPreferences$Editor, v0, v1, p0, p1
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
+	private static void setFontSize(WebView webview, int fs) {
+		String strFs = "";
+		switch (fs) {
+		case 0:strFs = "normal";break;
+		case 1:strFs = "big";break;
+		case 2:strFs = "small";break;
+		}
+		String url = "javascript:ChageModel(\'" + fs + "\'" + SkinsUtil.getNightMode() + ")";
+		webview.loadUrl(url);
+	}
+	
+	
+	public static boolean setFontSize(int fontSize) {
+		return commitInt("font_size", fontSize);
+	}
 
-public static setClubUserShow(String)Z
-    .registers 2
-    .param p0, "clubUserShow"
-    .prologue
-00000000  const-string            v0, "clubUserShow"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setCommonJsTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "commonJsTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+	public static boolean setGuidePage(int mode) {
+		return commitInt("guide_page", mode);
+	}
+	
+	
+	public static boolean setInstalledSkinVersion(int version) {
+		return mySharedPreferences.edit().putInt("skinNightVersion", version).commit();
+	}
+	
+	
+	public static boolean setIsSwitchedFlag(boolean value) {
+		return mySharedPreferences.edit().putBoolean("switchcityflag", value).commit();
+	}
 
-public static setDevDebugMode(Z, Context)V
-    .registers 6
-    .param p0, "isDebug"
-    .param p1, "context"
-    .prologue
-00000000  sget-object             v2, SpHelper->NAME_DEBUG_MODE:String
-00000004  const/4                 v3, 0x0
-00000006  invoke-virtual          Context->getSharedPreferences(String, I)SharedPreferences, p1, v2, v3
-0000000C  move-result-object      v1
-    .local v1, sp:Landroid/content/SharedPreferences;
-0000000E  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-00000014  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-00000016  sget-object             v2, SpHelper->KEY_DEBUG_MODE:String
-0000001A  invoke-interface        SharedPreferences$Editor->putBoolean(String, Z)SharedPreferences$Editor, v0, v2, p0
-00000020  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-00000026  return-void
-.end method
 
-private static setFontSize(WebView, I)V
-    .registers 5
-    .param p0, "webview"
-    .param p1, "fs"
-    .prologue
-00000000  const-string            v0, ""
-    .local v0, strFs:Ljava/lang/String;
-00000004  packed-switch           p1, :6C
-:A
-0000000A  new-instance            v1, StringBuilder
-0000000E  const-string            v2, "javascript:ChageModel(\'"
-00000012  invoke-direct           StringBuilder-><init>(String)V, v1, v2
-00000018  invoke-virtual          StringBuilder->append(String)StringBuilder, v1, v0
-0000001E  move-result-object      v1
-00000020  const-string            v2, "\',"
-00000024  invoke-virtual          StringBuilder->append(String)StringBuilder, v1, v2
-0000002A  move-result-object      v1
-0000002C  invoke-static           SkinsUtil->getNightMode()I
-00000032  move-result             v2
-00000034  invoke-virtual          StringBuilder->append(I)StringBuilder, v1, v2
-0000003A  move-result-object      v1
-0000003C  const-string            v2, ")"
-00000040  invoke-virtual          StringBuilder->append(String)StringBuilder, v1, v2
-00000046  move-result-object      v1
-00000048  invoke-virtual          StringBuilder->toString()String, v1
-0000004E  move-result-object      v1
-00000050  invoke-virtual          WebView->loadUrl(String)V, p0, v1
-00000056  return-void
-:58
-00000058  const-string            v0, "normal"
-0000005C  goto                    :A
-:5E
-0000005E  const-string            v0, "big"
-00000062  goto                    :A
-:64
-00000064  const-string            v0, "small"
-00000068  goto                    :A
-0000006C  .packed-switch 0x0
-        :58
-        :5E
-        :64
-    .end packed-switch
-.end method
+public static boolean setIsSwitchedLocationFlag(boolean value) {
+	return mySharedPreferences.edit().putBoolean("switch_location_city_flag", value).commit();
+}
 
-public static setFontSize(I)Z
-    .registers 2
-    .param p0, "fontSize"
-    .prologue
-00000000  const-string            v0, "font_size"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setGuidePage(I)Z
-    .registers 2
-    .param p0, "mode"
-    .prologue
-00000000  const-string            v0, "guide_page"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static boolean setJqueryJsTag(long changeTag) {
+	return commitLong("jqueryJsTag", changeTag);
+}
 
-public static setInstalledSkinVersion(I)Z
-    .registers 3
-    .param p0, "version"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "skinNightVersion"
-00000010  invoke-interface        SharedPreferences$Editor->putInt(String, I)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-public static setIsSwitchedFlag(Z)Z
-    .registers 3
-    .param p0, "value"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "switchcityflag"
-00000010  invoke-interface        SharedPreferences$Editor->putBoolean(String, Z)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
+public static boolean setJquerynewJsTag(long changeTag) {
+	return commitLong("jquerynewJsTag", changeTag);
+}
 
-public static setIsSwitchedLocationFlag(Z)Z
-    .registers 3
-    .param p0, "value"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "switch_location_city_flag"
-00000010  invoke-interface        SharedPreferences$Editor->putBoolean(String, Z)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-public static setJqueryJsTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "jqueryJsTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static boolean setLoadvideoJsTag(long changeTag) {
+	return commitLong("loadvideoJsTag", changeTag);
+}
 
-public static setJquerynewJsTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "jquerynewJsTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setLoadvideoJsTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "loadvideoJsTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static boolean setLocalDeviceID(String deviceID) {
+	return mySharedPreferences.edit().putString("local_device_id", deviceID).commit();
+}
 
-public static setLocalDeviceID(String)Z
-    .registers 3
-    .param p0, "deviceID"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "local_device_id"
-00000010  invoke-interface        SharedPreferences$Editor->putString(String, String)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-public static setMyProvinceId(String)Z
-    .registers 2
-    .param p0, "myProvinceId"
-    .prologue
-00000000  const-string            v0, "my_province_id"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static boolean setMyProvinceId(String myProvinceId) {
+	return commitString("my_province_id", myProvinceId);
+}
 
-public static setNewBulletinsLasttime(String)V
-    .registers 4
-    .param p0, "lasttime"
-    .prologue
-00000000  invoke-static           SpHelper->getNewBulletinsLasttime()String
-00000006  move-result-object      v2
-00000008  invoke-static           Integer->parseInt(String)I, v2
-0000000E  move-result             v1
-    .local v1, beforeLasttime:I
-00000010  invoke-static           Integer->parseInt(String)I, p0
-00000016  move-result             v0
-    .local v0, afterLasttime:I
-00000018  if-ge                   v1, v0, :26
-:1C
-0000001C  const-string            v2, "new_bulletins_lasttime"
-00000020  invoke-static           SpHelper->commitString(String, String)Z, v2, p0
-:26
-00000026  return-void
-:28
-00000028  move-exception          v2
-0000002A  goto                    :26
-    .catch NumberFormatException {:0 .. :26} :28
-.end method
 
-public static setPersuaderCssTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "persuaderCssTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static void setNewBulletinsLasttime(String lasttime) {
+	
+	String last = getNewBulletinsLasttime();
+	try {
+	int beforeLasttime = Integer.parseInt(last);
+	int afterLasttime = Integer.parseInt(lasttime);
+	if (beforeLasttime > afterLasttime) {
+		commitString("new_bulletins_lasttime", lasttime);
+	}
+	}catch (NumberFormatException e) {
+		
+	}
+}
+    
 
-public static setPhoneAuth(Z)Z
-    .registers 2
-    .param p0, "isPhoneAuth"
-    .prologue
-00000000  const-string            v0, "phone_auth"
-00000004  invoke-static           SpHelper->commitBoolean(String, Z)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static boolean setPersuaderCssTag(long changeTag) {
+	return commitLong("persuaderCssTag", changeTag);
+}
 
-public static setPriceCssTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "priceCssTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setSearchHistory(String)Z
-    .registers 3
-    .param p0, "value"
-    .prologue
-00000000  sget-object             v1, SpHelper->mSearchHistory:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "search_log_key"
-00000010  invoke-interface        SharedPreferences$Editor->putString(String, String)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
+public static boolean setPhoneAuth(boolean isPhoneAuth) {
+	return commitBoolean("phone_auth", isPhoneAuth);
+}
 
-public static setSeriesArticlePosition(I)Z
-    .registers 3
-    .param p0, "seriesArticlePosition"
-    .prologue
-00000000  sget-object             v1, SpHelper->mySharedPreferences:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v1
-0000000A  move-result-object      v0
-    .local v0, editor:Landroid/content/SharedPreferences$Editor;
-0000000C  const-string            v1, "seriesarticleposition"
-00000010  invoke-interface        SharedPreferences$Editor->putInt(String, I)SharedPreferences$Editor, v0, v1, p0
-00000016  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001C  move-result             v1
-0000001E  return                  v1
-.end method
 
-public static setShowGuideForFM(I)V
-    .registers 2
-    .param p0, "versionCode"
-    .prologue
-00000000  const-string            v0, "guide_page_for_fm"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  return-void
-.end method
+public static boolean setPriceCssTag(long changeTag) {
+	return commitLong("priceCssTag", changeTag);
+}
 
-public static setShowGuideForMain2(I)V
-    .registers 2
-    .param p0, "versionCode"
-    .prologue
-00000000  const-string            v0, "guide_page_for_main_2"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  return-void
-.end method
+public static boolean setSearchHistory(String value) {
+	return mSearchHistory.edit().putString("search_log_key", value).commit();
+}
 
-public static setShowGuideForSale(I)V
-    .registers 2
-    .param p0, "versionCode"
-    .prologue
-00000000  const-string            v0, "guide_page_for_sale"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  return-void
-.end method
 
-public static setShowGuideForSeriesDealer(I)V
-    .registers 2
-    .param p0, "versionCode"
-    .prologue
-00000000  const-string            v0, "guide_page_for_series_dealer"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  return-void
-.end method
+public static boolean setSeriesArticlePosition(int seriesArticlePosition) {
+	return mySharedPreferences.edit().putInt("seriesarticleposition", seriesArticlePosition).commit();
+}
 
-public static setSpMode(I)Z
-    .registers 2
-    .param p0, "mode"
-    .prologue
-00000000  const-string            v0, "spmode"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setThemePackageName(String)V
-    .registers 3
-    .param p0, "packageName"
-    .prologue
-00000000  sget-object             v0, SpHelper->mSkinConfig:SharedPreferences
-00000004  invoke-interface        SharedPreferences->edit()SharedPreferences$Editor, v0
-0000000A  move-result-object      v0
-0000000C  const-string            v1, "themePackage"
-00000010  invoke-interface        SharedPreferences$Editor->putString(String, String)SharedPreferences$Editor, v0, v1, p0
-00000016  move-result-object      v0
-00000018  invoke-interface        SharedPreferences$Editor->commit()Z, v0
-0000001E  return-void
-.end method
+public static void setShowGuideForFM(int versionCode) {
+	commitInt("guide_page_for_fm", versionCode);
+}
 
-public static setVideoCssTag(J)Z
-    .registers 4
-    .param p0, "changeTag"
-    .prologue
-00000000  const-string            v0, "videoCssTag"
-00000004  invoke-static           SpHelper->commitLong(String, J)Z, v0, p0, p1
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setVideoDisabledTips(String)Z
-    .registers 2
-    .param p0, "disabledTips"
-    .prologue
-00000000  const-string            v0, "video_disabled_tips"
-00000004  invoke-static           SpHelper->commitString(String, String)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static void setShowGuideForMain2(int versionCode) {
+	commitInt("guide_page_for_main_2", versionCode);
+}
 
-public static setVideoEnabled(I)Z
-    .registers 2
-    .param p0, "enabledFlag"
-    .prologue
-00000000  const-string            v0, "video_enabled"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setVideoHeight(I)Z
-    .registers 2
-    .param p0, "height"
-    .prologue
-00000000  const-string            v0, "video_height"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static void setShowGuideForSale(int versionCode) {
+	commitInt("guide_page_for_sale", versionCode);
+}
 
-public static setVideoMaxTime(I)Z
-    .registers 2
-    .param p0, "time"
-    .prologue
-00000000  const-string            v0, "video_max_time"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static setVideoRate(I)Z
-    .registers 2
-    .param p0, "rate"
-    .prologue
-00000000  const-string            v0, "video_rate"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static void setShowGuideForSeriesDealer(int versionCode) {
+	commitInt("guide_page_for_series_dealer", versionCode);
+}
 
-public static setVideoWidth(I)Z
-    .registers 2
-    .param p0, "width"
-    .prologue
-00000000  const-string            v0, "video_width"
-00000004  invoke-static           SpHelper->commitInt(String, I)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
 
-public static sethasNewBulletins(Z)Z
-    .registers 2
-    .param p0, "hasNewBulletins"
-    .prologue
-00000000  const-string            v0, "has_new_bulletins"
-00000004  invoke-static           SpHelper->commitBoolean(String, Z)Z, v0, p0
-0000000A  move-result             v0
-0000000C  return                  v0
-.end method
+public static boolean setSpMode(int mode) {
+	return commitInt("spmode", mode);
+}
+
+
+public static void setThemePackageName(String packageName) {
+	mSkinConfig.edit().putString("themePackage", packageName).commit();
+}
+
+
+public static boolean setVideoCssTag(long changeTag) {
+	return commitLong("videoCssTag", changeTag);
+}
+
+
+public static boolean setVideoDisabledTips(String disabledTips) {
+	return commitString("video_disabled_tips", disabledTips);
+}
+
+
+public static boolean setVideoEnabled(int enabledFlag) {
+	return commitInt("video_enabled", enabledFlag);
+}
+
+
+public static boolean setVideoHeight(int height) {
+	return commitInt("video_height", height);
+}
+
+
+public static boolean setVideoMaxTime(int time) {
+	return commitInt("video_max_time", time);
+}
+
+
+public static boolean setVideoRate(int rate) {
+	return commitInt("video_rate", rate);
+}
+ 
+
+public static boolean setVideoWidth(int width) {
+	return commitInt("video_width", width);
+}
+
+
+public static boolean sethasNewBulletins(boolean hasNewBulletins) {
+	return commitBoolean("has_new_bulletins", hasNewBulletins);
+}
+
 	
 	
 	
