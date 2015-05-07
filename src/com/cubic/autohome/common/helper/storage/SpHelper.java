@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.cubic.autohome.business.MyApplication;
 import com.cubic.autohome.business.user.owner.bean.AppRecommandEntity;
+import com.cubic.autohome.common.util.ArrayListAndStringUtil;
 
 import android.content.Context;
 import android.content.SharedPreferences;
